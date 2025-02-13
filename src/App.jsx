@@ -1,6 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Correct import
-import Navbar from "./components/Navbar/Navbar"; 
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home";
 import AdoptPet from "./pages/AdoptPet";
 import ContactUs from "./pages/ContactUs";
@@ -11,8 +11,8 @@ import UserDashboard from "./pages/UserDashboard";
 
 const App = () => {
   return (
-    <Router>
-      <Navbar />
+    <div>
+      <Navbar /> {/* Global Navbar */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/adoptpet" element={<AdoptPet />} />
@@ -22,7 +22,7 @@ const App = () => {
         <Route path="/successstories" element={<SuccessStories />} />
         <Route path="/userdashboard" element={<UserDashboard />} />
       </Routes>
-    </Router>
+    </div>
   );
 };
 
