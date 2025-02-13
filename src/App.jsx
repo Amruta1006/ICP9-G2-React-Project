@@ -1,9 +1,13 @@
 import React from 'react'
+import AboutUs from './pages/AboutUs'
+
 
 function App() {
   return (
     <div>
-<h1 class="text-3xl font-bold text-blue-500">Welcome to our site!</h1>     </div>
+      <AboutUs organizationName="PetAdopt"/>     
+
+</div>
   )
 }
 
