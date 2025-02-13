@@ -1,4 +1,4 @@
-const Pets = 
+const Teams = 
     [
         
             {
@@ -60,5 +60,5 @@ const Pets =
           
           
       ]
-      export { Pets }
+      export { Teams };
       
