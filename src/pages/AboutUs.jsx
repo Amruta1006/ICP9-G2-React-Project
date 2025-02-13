@@ -1,8 +1,9 @@
-import React from 'react'
-
+import React from 'react';
+import petimg from '../../src/assets/petimg.jpg';
 const AboutUs = ({organizationName})=>{
   return (
     <div className=' bg-gray-100 full-h-screen'>
+    <img src={petimg} alt='pet image' className="w-[1600px] h-[500px] " />
     <div className='bg-white mt-3'>
     <h1 className='text-center text-4xl text-purple-600 bg-white'><b>About Us</b></h1>
     <p className='text-center mt-5 text-2xl bg-white'>
