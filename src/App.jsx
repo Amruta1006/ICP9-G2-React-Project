@@ -1,6 +1,5 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home";
 import AdoptPet from "./pages/AdoptPet";
 import ContactUs from "./pages/ContactUs";
@@ -12,7 +11,6 @@ import UserDashboard from "./pages/UserDashboard";
 const App = () => {
   return (
     <div>
-      <Navbar /> {/* Global Navbar */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/adoptpet" element={<AdoptPet />} />
