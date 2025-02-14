@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import cat1 from '../../src/assets/cat1.avif';
+import dog1 from '../../src/assets/dog1.avif';
 import petimg from '../../src/assets/petimg.jpg';
 import petimg2 from '../../src/assets/petimg2.jpg';
+
+import { SquareMinus, SquarePlus } from 'lucide-react';
 
 import { Teams } from './TeamsData';
 
@@ -10,6 +14,8 @@ const AboutUs = ({organizationName})=>{
 const [searchText, setsearchText] = useState("");
 const [filterdUsers, setfilterdUsers] = useState(Teams);
 const [filterRole, setfilterRole] = useState("");
+const [avilableDog, setAvilableDog] = useState(0);
+const [avilableCat, setAvilableCat] = useState(0);
  
 useEffect(()=>{
   if(!searchText){
@@ -81,7 +87,29 @@ useEffect(()=>{
 </div>
 
 <div className='p-20'>
-  <h2 className='text-center text-4xl text-purple-500 py-10 border-2 border-purple-300 border-dotted rounded-md'>Animal Count</h2>
+  <h1 className='text-center text-4xl text-purple-500 py-10 border-2 border-purple-300 border-dotted rounded-md'>Animal Count</h1>
+  <div className='flex justify-around mt-10'>
+    <div className='bg-gray-100 m-5 w-1/4 rounded-lg'>
+      <h2 className='text-center m-5 text-3xl my-4 border-b-2 pb-4 text-purple-400'>Avilable Dog</h2>
+      <img src={dog1} className='w-50 h-45 object-cover mx-auto mb-4 rounded-2xl'/>
+      <h3 className='text-5xl text-center'>{avilableDog}</h3>
+      <div className='flex justify-around m-5'>
+      <SquareMinus size={50} onClick={()=>{setAvilableDog(avilableDog-1);}} />
+      <SquarePlus size={50} onClick={()=>{setAvilableDog(avilableDog+1);}} />
+
+        
+      </div>
+      </div>
+    <div className='bg-gray-100 m-5 w-1/4 rounded-lg'>
+      <h2 className='text-center m-5 text-3xl my-4 border-b-2 pb-4 text-purple-400'>Avilable Cat</h2>
+      <img src={cat1} className='w-50 h-45 object-cover mx-auto mb-4 rounded-2xl'/>
+      <h3 className='text-5xl text-center'>{avilableCat}</h3>
+      <div className='flex justify-around m-5'>
+      <SquareMinus size={50} onClick={()=>{setAvilableCat(avilableCat-1);}} />
+      <SquarePlus size={50} onClick={()=>{setAvilableCat(avilableCat+1);}} />
+      </div>
+    </div>
+  </div>
 </div>
 
 
