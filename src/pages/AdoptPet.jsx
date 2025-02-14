@@ -79,23 +79,39 @@ function AdoptPet() {
   ]
 
   const [favorites, setFavorites] = useState([])
+  const [cart, setCart] = useState([])
 
-
+  // Load favorites and cart from local storage
   useEffect(() => {
     const savedFavorites = JSON.parse(localStorage.getItem('favorites')) || []
+    const savedCart = JSON.parse(localStorage.getItem('cart')) || []
     setFavorites(savedFavorites)
+    setCart(savedCart)
   }, [])
 
-  
+  // Save favorites and cart to local storage
   useEffect(() => {
     localStorage.setItem('favorites', JSON.stringify(favorites))
   }, [favorites])
+
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart))
+  }, [cart])
 
   const toggleFavorite = (petId) => {
     if (favorites.includes(petId)) {
       setFavorites(favorites.filter((id) => id !== petId))
     } else {
       setFavorites([...favorites, petId])
+    }
+  }
+
+  const addToCart = (pet) => {
+    const isAlreadyInCart = cart.some((item) => item.id === pet.id)
+    if (!isAlreadyInCart) {
+      setCart([...cart, pet])
+    } else {
+      alert('This pet is already in your cart!')
     }
   }
 
@@ -106,14 +122,18 @@ function AdoptPet() {
         <h1 className="text-5xl font-bold text-center text-gray-800 mb-12">Find Your Furry Friend</h1>
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-4">
           {pets.map((pet) => (
-            <div key={pet.id} className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden relative">
+            <div key={pet.id} className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden relative flex flex-col">
               <img src={pet.image} alt={pet.name} className="w-full h-64 object-cover" />
-              <div className="p-6 flex flex-col h-full">
+              <div className="p-6 flex flex-col flex-grow">
                 <h2 className="text-3xl font-bold text-gray-800">{pet.name}</h2>
                 <p className="text-gray-500 text-lg">{pet.type} - {pet.age}</p>
                 <p className="text-gray-600 mt-4 flex-grow">{pet.description}</p>
-                <button className="mt-4 w-full py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors duration-300">
-                  Adopt Me
+                <button
+                  onClick={() => addToCart(pet)}
+                  disabled={cart.some((item) => item.id === pet.id)}
+                  className={`mt-4 w-full py-2 rounded-lg font-semibold transition-colors duration-300 ${cart.some((item) => item.id === pet.id) ? 'bg-gray-400 text-white cursor-not-allowed' : 'bg-green-500 text-white hover:bg-green-600'}`}
+                >
+                  {cart.some((item) => item.id === pet.id) ? 'Added' : 'Adopt Me'}
                 </button>
               </div>
               <button
@@ -126,6 +146,7 @@ function AdoptPet() {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
