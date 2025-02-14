@@ -18,7 +18,7 @@ function AdoptPet() {
       name: 'Whiskers',
       type: 'Cat',
       age: '1 year',
-      image: 'https://via.placeholder.com/400',
+      image: 'https://iheartcats.com/wp-content/uploads/2020/06/cat-whiskers.jpg',
       description: 'A curious cat who loves to explore and cuddle.',
     },
     {
@@ -26,7 +26,7 @@ function AdoptPet() {
       name: 'Nibbles',
       type: 'Rabbit',
       age: '6 months',
-      image: 'https://via.placeholder.com/400',
+      image: 'https://tse1.mm.bing.net/th?id=OIP.lo2AwxcRtlDZKpI3BFJbXAAAAA&pid=Api&P=0&h=220',
       description: 'An energetic bunny who loves to hop around and play.',
     },
     {
