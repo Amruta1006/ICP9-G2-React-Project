@@ -7,13 +7,14 @@ import HowToAdopt from "./pages/HowToAdopt";
 import PetDetails from "./pages/PetDetails";
 import SuccessStories from "./pages/SuccessStories";
 import UserDashboard from "./pages/UserDashboard";
-import AboutUs from "./pages/AboutUs";  // Import AboutUs page
+import AboutUs from "./pages/AboutUs";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
     <div className="flex flex-col min-h-screen">
+      <Navbar /> {/* Ensure this is placed at the top */}
       <div className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -26,7 +27,7 @@ const App = () => {
           <Route path="/userdashboard" element={<UserDashboard />} />
         </Routes>
       </div>
-      <Footer />  {/* Footer appears on every page */}
+      <Footer />
     </div>
   );
 };

@@ -5,7 +5,6 @@ import Footer from '../components/Footer/Footer'
 function AdoptPet() {
   return (
     <div>
-        <Navbar />
         <h1>Adopt a Pet</h1>
     </div>
   )
