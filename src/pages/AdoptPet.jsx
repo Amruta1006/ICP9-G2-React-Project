@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer/Footer'
+import { toast } from 'react-hot-toast'  
 
 function AdoptPet() {
   const pets = [
@@ -9,7 +10,7 @@ function AdoptPet() {
       name: 'Bella',
       type: 'Dog',
       age: '2 years',
-      image: 'https://via.placeholder.com/400',
+      image: 'https://thumbs.dreamstime.com/b/dog-jack-russel-terrier-bella-cute-babydog-227585755.jpg',
       description: 'A playful and friendly dog looking for a loving home.',
     },
     {
@@ -79,40 +80,28 @@ function AdoptPet() {
   ]
 
   const [favorites, setFavorites] = useState([])
-  const [cart, setCart] = useState([])
 
-  // Load favorites and cart from local storage
   useEffect(() => {
     const savedFavorites = JSON.parse(localStorage.getItem('favorites')) || []
-    const savedCart = JSON.parse(localStorage.getItem('cart')) || []
     setFavorites(savedFavorites)
-    setCart(savedCart)
   }, [])
 
-  // Save favorites and cart to local storage
   useEffect(() => {
     localStorage.setItem('favorites', JSON.stringify(favorites))
   }, [favorites])
 
-  useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart))
-  }, [cart])
-
   const toggleFavorite = (petId) => {
     if (favorites.includes(petId)) {
       setFavorites(favorites.filter((id) => id !== petId))
+      toast.success('Removed from Favorites!')  
     } else {
       setFavorites([...favorites, petId])
+      toast.success('Added to Favorites!')  
     }
   }
 
   const addToCart = (pet) => {
-    const isAlreadyInCart = cart.some((item) => item.id === pet.id)
-    if (!isAlreadyInCart) {
-      setCart([...cart, pet])
-    } else {
-      alert('This pet is already in your cart!')
-    }
+    toast.success(`${pet.name} added to your cart!`)  
   }
 
   return (
@@ -130,10 +119,10 @@ function AdoptPet() {
                 <p className="text-gray-600 mt-4 flex-grow">{pet.description}</p>
                 <button
                   onClick={() => addToCart(pet)}
-                  disabled={cart.some((item) => item.id === pet.id)}
-                  className={`mt-4 w-full py-2 rounded-lg font-semibold transition-colors duration-300 ${cart.some((item) => item.id === pet.id) ? 'bg-gray-400 text-white cursor-not-allowed' : 'bg-green-500 text-white hover:bg-green-600'}`}
+                  disabled={false}
+                  className={`mt-4 w-full py-2 rounded-lg font-semibold transition-colors duration-300 bg-green-500 text-white hover:bg-green-600`}
                 >
-                  {cart.some((item) => item.id === pet.id) ? 'Added' : 'Adopt Me'}
+                  Adopt Me
                 </button>
               </div>
               <button
@@ -146,7 +135,6 @@ function AdoptPet() {
           ))}
         </div>
       </div>
-      <Footer />
     </div>
   )
 }
