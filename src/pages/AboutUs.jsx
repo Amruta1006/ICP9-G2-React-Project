@@ -79,6 +79,12 @@ useEffect(()=>{
 
 <img src={petimg2} alt='pet image2' className='w-[500px] m-4'/>
 </div>
+
+<div className='p-20'>
+  <h2 className='text-center text-4xl text-purple-500 py-10 border-2 border-purple-300 border-dotted rounded-md'>Animal Count</h2>
+</div>
+
+
     <h2 className='text-center text-3xl m-5 text-purple-500'><b>Our TEAM</b></h2>
     
     <input type='text' placeholder='Search' className='w-2/3 p-2 mb-5 bg-white block mx-auto rounded-lg text-2xl border border-purple-100' value={searchText}
