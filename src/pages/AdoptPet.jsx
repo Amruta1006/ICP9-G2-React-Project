@@ -10,7 +10,7 @@ function AdoptPet() {
       name: 'Bella',
       type: 'Dog',
       age: '2 years',
-      image: 'https://thumbs.dreamstime.com/b/dog-jack-russel-terrier-bella-cute-babydog-227585755.jpg',
+      image: 'https://tse1.mm.bing.net/th?id=OIP.SJfkwPs7CPz7JpHvT2iH9wHaEJ&pid=Api&P=0&h=220',
       description: 'A playful and friendly dog looking for a loving home.',
     },
     {
@@ -18,7 +18,7 @@ function AdoptPet() {
       name: 'Whiskers',
       type: 'Cat',
       age: '1 year',
-      image: 'https://iheartcats.com/wp-content/uploads/2020/06/cat-whiskers.jpg',
+      image: 'https://iheartcats.com/wp-content/uploads/2020/06/cat-2301015_1280-e1592928545934.jpg',
       description: 'A curious cat who loves to explore and cuddle.',
     },
     {
@@ -26,7 +26,7 @@ function AdoptPet() {
       name: 'Nibbles',
       type: 'Rabbit',
       age: '6 months',
-      image: 'https://tse1.mm.bing.net/th?id=OIP.lo2AwxcRtlDZKpI3BFJbXAAAAA&pid=Api&P=0&h=220',
+      image: 'http://upload.wikimedia.org/wikipedia/commons/a/a5/European_Rabbit,_Lake_District,_UK_-_August_2011.jpg',
       description: 'An energetic bunny who loves to hop around and play.',
     },
     {
@@ -50,7 +50,7 @@ function AdoptPet() {
       name: 'Fluffy',
       type: 'Rabbit',
       age: '1 year',
-      image: 'https://via.placeholder.com/400',
+      image: 'https://tse3.mm.bing.net/th?id=OIP.5-hLeijT1xCxJGRrkBETtQHaE8&pid=Api&P=0&h=220',
       description: 'A fluffy bunny that enjoys hopping around.',
     },
     {
@@ -58,7 +58,7 @@ function AdoptPet() {
       name: 'Max',
       type: 'Dog',
       age: '4 years',
-      image: 'https://via.placeholder.com/400',
+      image: 'https://tse4.mm.bing.net/th?id=OIP.Eb5KOJEIbQ9p6-KVdRZRhwHaE8&pid=Api&P=0&h=220',
       description: 'Loyal and energetic, loves to play fetch.',
     },
     {
@@ -66,7 +66,7 @@ function AdoptPet() {
       name: 'Mittens',
       type: 'Cat',
       age: '3 years',
-      image: 'https://via.placeholder.com/400',
+      image: 'https://tse2.mm.bing.net/th?id=OIP.C5dhvdCSY5eZVumBau-cSQHaE8&pid=Api&P=0&h=220',
       description: 'Calm and loving, enjoys cozying up.',
     },
     {
@@ -74,7 +74,7 @@ function AdoptPet() {
       name: 'Snowball',
       type: 'Rabbit',
       age: '8 months',
-      image: 'https://via.placeholder.com/400',
+      image: 'https://www.thesprucepets.com/thmb/6QlPa95jJ6LsWWmFaCaFZSFuhYE=/3300x2190/filters:no_upscale():max_bytes(150000):strip_icc()/white-hotot-rabbit-eating-grass-509265984-5c0da06546e0fb0001366ac0.jpg',
       description: 'Fluffy and curious, loves carrots!',
     },
   ]
