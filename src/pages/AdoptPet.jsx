@@ -34,7 +34,7 @@ function AdoptPet() {
       name: 'Buddy',
       type: 'Dog',
       age: '3 years',
-      image: 'https://via.placeholder.com/400',
+      image: 'https://tse3.mm.bing.net/th?id=OIP.qhH4E0xTI8j85u5lBEK0bwHaEK&pid=Api&P=0&h=220',
       description: 'A loyal companion with a playful spirit.',
     },
     {
@@ -42,7 +42,7 @@ function AdoptPet() {
       name: 'Shadow',
       type: 'Cat',
       age: '2 years',
-      image: 'https://via.placeholder.com/400',
+      image: 'https://tse1.mm.bing.net/th?id=OIP.rQBkREchNA_ThoALOqeYVAHaE9&pid=Api&P=0&h=220',
       description: 'A quiet cat who loves to nap in sunny spots.',
     },
     {
