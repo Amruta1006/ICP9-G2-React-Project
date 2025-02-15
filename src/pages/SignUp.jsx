@@ -1,6 +1,36 @@
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
-  
+  const navigate = useNavigate();
+  const [user, setUser] = useState({ name: "", email: "", password: "", profilePic: "", contact: "" });
+  const [image, setImage] = useState(null);
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  };
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImage(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+ 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validateForm()) {
+      const userData = { ...user, profilePic: image || user.profilePic };
+      localStorage.setItem("user", JSON.stringify(userData));
+      navigate("/"); // Redirect to Home Page
+    }
+  };
 
   return (
     <div className="max-w-md mx-auto p-6 bg-white shadow-md rounded-lg mt-10">
