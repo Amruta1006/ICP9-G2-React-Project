@@ -1,7 +1,5 @@
-
 import React, { useState, useEffect } from "react";
-import Navbar from "../components/Navbar/Navbar";
-import Footer from "../components/Footer/Footer";
+import SignUp from "./SignUp";
 
 const UserDashboard = () => {
   const [user, setUser] = useState({
@@ -11,57 +9,11 @@ const UserDashboard = () => {
     profilePic: "",
   });
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [newProfilePic, setNewProfilePic] = useState(""); 
-
-  useEffect(() => {
-    const savedUser = JSON.parse(localStorage.getItem("user"));
-    if (savedUser) {
-      setUser(savedUser);
-      setNewProfilePic(savedUser.profilePic || "https://via.placeholder.com/100");
-    }
-  }, []);
-
-  const handleSignOut = () => {
-    localStorage.clear();
-    setUser({ name: "", email: "", contact: "", profilePic: "" });
-  };
-
-  const handleEditClick = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
-
-  const handleChange = (e) => {
-    setUser({ ...user, [e.target.name]: e.target.value });
-  };
-
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setNewProfilePic(reader.result); 
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
-  const handleSave = () => {
-    const updatedUser = { ...user, profilePic: newProfilePic };
-    setUser(updatedUser);
-    localStorage.setItem("user", JSON.stringify(updatedUser));
-    setIsModalOpen(false);
-  };
-
+ 
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
       <div className="w-full mx-auto p-8 bg-white shadow-lg rounded-lg mt-10 text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-6">User Dashboard</h2>
+        <h2 className="text-3xl font-bold text-gray-800 mb-6">Your Dashboard</h2>
         <div className="flex flex-col items-center">
           <img
             src={user.profilePic || "https://via.placeholder.com/100"}
@@ -109,27 +61,30 @@ const UserDashboard = () => {
             <input
               type="text"
               name="name"
-              value={user.name}
+              value={editedUser.name}
               onChange={handleChange}
               placeholder="Enter Name"
-              className="w-full p-2 border rounded-md mb-2"
-            />
+               className="w-full p-2 border rounded-md mb-2"
+           />
+
             <input
               type="email"
               name="email"
-              value={user.email}
+              value={editedUser.email}
               onChange={handleChange}
-              placeholder="Enter Email"
-              className="w-full p-2 border rounded-md mb-2"
-            />
+               placeholder="Enter Email"
+                 className="w-full p-2 border rounded-md mb-2"
+             />
+
             <input
               type="text"
               name="contact"
-              value={user.contact}
+              value={editedUser.contact}
               onChange={handleChange}
-              placeholder="Enter Contact"
-              className="w-full p-2 border rounded-md mb-2"
+               placeholder="Enter Contact"
+                className="w-full p-2 border rounded-md mb-2"
             />
+
             <div className="flex justify-end space-x-2">
               <button
                 onClick={handleSave}
@@ -148,8 +103,24 @@ const UserDashboard = () => {
         </div>
       )}
 
-     
+
+
+<div className="min-h-screen bg-gray-100 py-10 px-5">
+
+      <div className="max-w-6xl mx-auto mb-10">
+        <h2 className="text-3xl font-bold mb-4 text-green-600">🐶 Adopted Pets</h2>
+       
+      </div>
+
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl font-bold mb-4 text-pink-600">❤️ Favorite Pets</h2>
+       
+      </div>
     </div>
+
+
+
+</div>
   );
 };
 
