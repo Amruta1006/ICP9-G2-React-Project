@@ -117,7 +117,12 @@ const UserDashboard = () => {
                 <div className="p-4">
                   <h3 className="text-xl font-bold text-gray-800">{pet.name}</h3>
                   <p className="text-gray-600">{pet.type} - {pet.age}</p>
-                  
+                  <button
+                    onClick={() => removeAdoptedPet(pet.id)}
+                    className="mt-3 px-4 py-2 bg-red-500 text-white rounded-lg w-full hover:bg-red-600 transition"
+                  >
+                    Unadopt
+                  </button>
                 </div>
               </div>
             ))}
