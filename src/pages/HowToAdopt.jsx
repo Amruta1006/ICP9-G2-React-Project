@@ -20,7 +20,7 @@ function HowToAdopt() {
                   disabled={false}
                   className={`mt-4 w-full py-2 rounded-lg font-semibold transition-colors duration-300 bg-green-500 text-white hover:bg-green-600`}
                 >
-                  HowToAdap
+                  HowToAdap Adopt Pet*****
                 </button>
               </div>
             
