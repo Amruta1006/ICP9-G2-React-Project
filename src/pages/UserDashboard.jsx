@@ -8,6 +8,80 @@ const UserDashboard = () => {
     contact: "",
     profilePic: "",
   });
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [newProfilePic, setNewProfilePic] = useState(""); 
+  const [editedUser, setEditedUser] = useState({ ...user });
+
+  useEffect(() => {
+    const savedUser = JSON.parse(localStorage.getItem("user"));
+    if (savedUser) {
+      setUser(savedUser);
+      setNewProfilePic(savedUser.profilePic || "https://via.placeholder.com/100");
+    }
+  }, []);
+
+  const handleSignOut = () => {
+    localStorage.clear();
+    setUser({ name: "", email: "", contact: "", profilePic: "" });
+    setFavorites([]);
+    setAdoptedPets([]);
+  };
+
+  
+  const handleEditClick = () => {
+    setEditedUser({ ...user });
+    setNewProfilePic(user.profilePic || "https://via.placeholder.com/100");
+    setIsModalOpen(true);
+  };
+  
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false); // Just close the modal without saving
+  };
+
+  const handleChange = (e) => {
+    setEditedUser({ ...editedUser, [e.target.name]: e.target.value });
+  };
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setNewProfilePic(reader.result); 
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+
+  const handleSave = () => {
+    const updatedUser = { ...editedUser, profilePic: newProfilePic };
+    setUser(updatedUser);
+    localStorage.setItem("user", JSON.stringify(updatedUser));
+    setIsModalOpen(false);
+  };
+  const [favorites, setFavorites] = useState([]);
+  const [adoptedPets, setAdoptedPets] = useState([]);
+
+  
+
+  
+
+  const removeAdoptedPet = (id) => {
+    const updatedAdoptedPets = adoptedPets.filter((pet) => pet.id !== id);
+    setAdoptedPets(updatedAdoptedPets);
+    localStorage.setItem('adoptedPets', JSON.stringify(updatedAdoptedPets));
+  };
+
+  useEffect(() => {
+    const storedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const storedAdoptedPets = JSON.parse(localStorage.getItem('adoptedPets')) || [];
+    
+    setFavorites(storedFavorites);
+    setAdoptedPets(storedAdoptedPets);
+  }, []);
+
 
  
   return (
