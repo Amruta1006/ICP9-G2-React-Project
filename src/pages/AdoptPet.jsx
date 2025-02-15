@@ -1,3 +1,4 @@
+import React from 'react'
 import React, { useState, useEffect } from 'react'
 import { toast, Toaster } from 'react-hot-toast'  
 
@@ -103,6 +104,9 @@ function AdoptPet() {
   }
 
   return (
+    <div>
+        <Navbar />
+        <h1>Adopt a Pet</h1>
     <div className="min-h-screen flex flex-col">
       <div className="bg-gradient-to-b from-pink-100 to-white py-16 flex-grow">
         <h1 className="text-5xl font-bold text-center text-gray-800 mb-12">Find Your Furry Friend</h1>
@@ -136,5 +140,3 @@ function AdoptPet() {
     </div>
   )
 }
-
-export default AdoptPet
