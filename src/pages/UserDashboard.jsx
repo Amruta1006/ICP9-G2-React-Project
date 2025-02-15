@@ -8,9 +8,11 @@ const UserDashboard = () => {
     contact: "",
     profilePic: "",
   });
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newProfilePic, setNewProfilePic] = useState(""); 
   const [editedUser, setEditedUser] = useState({ ...user });
+
 
   useEffect(() => {
     const savedUser = JSON.parse(localStorage.getItem("user"));
@@ -36,7 +38,7 @@ const UserDashboard = () => {
   
 
   const handleCloseModal = () => {
-    setIsModalOpen(false); // Just close the modal without saving
+    setIsModalOpen(false); 
   };
 
   const handleChange = (e) => {
@@ -55,6 +57,7 @@ const UserDashboard = () => {
   };
 
 
+
   const handleSave = () => {
     const updatedUser = { ...editedUser, profilePic: newProfilePic };
     setUser(updatedUser);
@@ -64,6 +67,7 @@ const UserDashboard = () => {
   const [favorites, setFavorites] = useState([]);
   const [adoptedPets, setAdoptedPets] = useState([]);
 
+  
 
   const removeFavorite = (id) => {
     const updatedFavorites = favorites.filter((pet) => pet.id !== id);
@@ -85,8 +89,6 @@ const UserDashboard = () => {
     setAdoptedPets(storedAdoptedPets);
   }, []);
 
-
- 
   return (
     <div className="flex flex-col min-h-screen">
       <div className="w-full mx-auto p-8 bg-white shadow-lg rounded-lg mt-10 text-center">
@@ -136,33 +138,31 @@ const UserDashboard = () => {
             </div>
 
             <input
-              type="text"
-              name="name"
+               type="text"
+               name="name"
               value={editedUser.name}
               onChange={handleChange}
-              placeholder="Enter Name"
+               placeholder="Enter Name"
                className="w-full p-2 border rounded-md mb-2"
            />
 
             <input
               type="email"
               name="email"
-              value={editedUser.email}
-              onChange={handleChange}
-               placeholder="Enter Email"
-                 className="w-full p-2 border rounded-md mb-2"
-             />
-
-            <input
-              type="text"
-              name="contact"
-              value={editedUser.contact}
-              onChange={handleChange}
-               placeholder="Enter Contact"
-                className="w-full p-2 border rounded-md mb-2"
-            />
-
-            <div className="flex justify-end space-x-2">
+             value={editedUser.email}
+             onChange={handleChange}
+            placeholder="Enter Email"
+           className="w-full p-2 border rounded-md mb-2"
+        />
+      <input
+        type="text"
+        name="contact"
+        value={editedUser.contact}
+        onChange={handleChange}
+       placeholder="Enter Contact"
+      className="w-full p-2 border rounded-md mb-2"
+    />
+   <div className="flex justify-end space-x-2">
               <button
                 onClick={handleSave}
                 className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
@@ -180,10 +180,7 @@ const UserDashboard = () => {
         </div>
       )}
 
-
-
 <div className="min-h-screen bg-gray-100 py-10 px-5">
-
       <div className="max-w-6xl mx-auto mb-10">
         <h2 className="text-3xl font-bold mb-4 text-green-600">🐶 Adopted Pets</h2>
         {adoptedPets.length > 0 ? (
@@ -208,18 +205,37 @@ const UserDashboard = () => {
           <p className="text-gray-500">No adopted pets yet.</p>
         )}
       </div>
-
-      <div className="max-w-6xl mx-auto">
+   <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold mb-4 text-pink-600">❤️ Favorite Pets</h2>
-       
+        {favorites.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {favorites.map((pet) => (
+              <div key={pet.id} className="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src={pet.image} alt={pet.name} className="w-full h-48 object-cover" />
+                <div className="p-4">
+                  <h3 className="text-xl font-bold text-gray-800">{pet.name}</h3>
+                  <p className="text-gray-600">{pet.type} - {pet.age}</p>
+                  <button
+                    onClick={() => removeFavorite(pet.id)}
+                    className="mt-3 px-4 py-2 bg-gray-400 text-white rounded-lg w-full hover:bg-gray-500 transition"
+                  >
+                    Remove from Favorites
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p className="text-gray-500">No favorite pets yet.</p>
+        )}
       </div>
     </div>
-
-
-
 </div>
   );
 };
+
+
+
 
 export default UserDashboard;
 
