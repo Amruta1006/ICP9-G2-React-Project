@@ -6,7 +6,7 @@ function SuccessStories() {
         See how our adorable pets found their loving homes!
       </p>
       <div className="text-center mt-5">
-        <button className="bg-gray-500 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-gray-600">
+        <button className="bg-gray-400 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-gray-500">
           Share Your Story
         </button>
       </div>
