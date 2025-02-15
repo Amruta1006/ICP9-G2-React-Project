@@ -12,7 +12,7 @@ const UserDashboard = () => {
   });
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [newProfilePic, setNewProfilePic] = useState(""); // Store selected image preview
+  const [newProfilePic, setNewProfilePic] = useState(""); 
 
   useEffect(() => {
     const savedUser = JSON.parse(localStorage.getItem("user"));
@@ -27,14 +27,7 @@ const UserDashboard = () => {
     setUser({ name: "", email: "", contact: "", profilePic: "" });
   };
 
-
-  const handleSave = () => {
-    const updatedUser = { ...user, profilePic: newProfilePic };
-    setUser(updatedUser);
-    localStorage.setItem("user", JSON.stringify(updatedUser));
-    setIsModalOpen(false);
-  };
-
+  
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
@@ -65,7 +58,66 @@ const UserDashboard = () => {
           </button>
         </div>
       </div>
-     
+      {isModalOpen && (
+        <div className="fixed inset-0 flex items-center justify-center  bg-opacity-50">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-96 relative">
+            <h2 className="text-xl font-bold mb-4 text-center">Edit Profile</h2>
+
+            <div className="flex flex-col items-center">
+              <img
+                src={newProfilePic}
+                alt="Profile Preview"
+                className="w-24 h-24 rounded-full border-2 border-gray-300 mb-4"
+              />
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleImageChange}
+                className="w-full border px-3 py-2 rounded-md mb-4"
+              />
+            </div>
+
+            <input
+              type="text"
+              name="name"
+              value={user.name}
+              onChange={handleChange}
+              placeholder="Enter Name"
+              className="w-full p-2 border rounded-md mb-2"
+            />
+            <input
+              type="email"
+              name="email"
+              value={user.email}
+              onChange={handleChange}
+              placeholder="Enter Email"
+              className="w-full p-2 border rounded-md mb-2"
+            />
+            <input
+              type="text"
+              name="contact"
+              value={user.contact}
+              onChange={handleChange}
+              placeholder="Enter Contact"
+              className="w-full p-2 border rounded-md mb-2"
+            />
+            <div className="flex justify-end space-x-2">
+              <button
+                onClick={handleSave}
+                className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+              >
+                Save
+              </button>
+              <button
+                onClick={handleCloseModal}
+                className="bg-gray-400 text-white px-4 py-2 rounded-md hover:bg-gray-500"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
      
     </div>
