@@ -109,7 +109,22 @@ const UserDashboard = () => {
 
       <div className="max-w-6xl mx-auto mb-10">
         <h2 className="text-3xl font-bold mb-4 text-green-600">🐶 Adopted Pets</h2>
-       
+        {adoptedPets.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {adoptedPets.map((pet) => (
+              <div key={pet.id} className="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src={pet.image} alt={pet.name} className="w-full h-48 object-cover" />
+                <div className="p-4">
+                  <h3 className="text-xl font-bold text-gray-800">{pet.name}</h3>
+                  <p className="text-gray-600">{pet.type} - {pet.age}</p>
+                  
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p className="text-gray-500">No adopted pets yet.</p>
+        )}
       </div>
 
       <div className="max-w-6xl mx-auto">
