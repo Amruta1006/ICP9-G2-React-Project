@@ -1,5 +1,5 @@
 import React from 'react'
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { toast, Toaster } from 'react-hot-toast'  
 
 function AdoptPet() {
@@ -138,5 +138,6 @@ function AdoptPet() {
       </div>
       <Toaster /> 
     </div>
-  )
+    </div>
+  );
 }
