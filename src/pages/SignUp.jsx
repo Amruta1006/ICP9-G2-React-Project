@@ -42,6 +42,7 @@ const SignUp = () => {
       const userData = { ...user, profilePic: image || user.profilePic };
       localStorage.setItem("user", JSON.stringify(userData));
       navigate("/"); 
+    }
   };
 
   return (
