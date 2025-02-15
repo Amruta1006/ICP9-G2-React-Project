@@ -1,7 +1,5 @@
 import React from 'react'
 import React, { useState, useEffect } from 'react'
-import Navbar from '../components/Navbar/Navbar'
-import Footer from '../components/Footer/Footer'
 import { toast, Toaster } from 'react-hot-toast'  
 
 function AdoptPet() {
@@ -110,7 +108,6 @@ function AdoptPet() {
         <Navbar />
         <h1>Adopt a Pet</h1>
     <div className="min-h-screen flex flex-col">
-      <Navbar />
       <div className="bg-gradient-to-b from-pink-100 to-white py-16 flex-grow">
         <h1 className="text-5xl font-bold text-center text-gray-800 mb-12">Find Your Furry Friend</h1>
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-4">
@@ -139,7 +136,6 @@ function AdoptPet() {
           ))}
         </div>
       </div>
-      <Footer />
       <Toaster /> 
     </div>
   )
