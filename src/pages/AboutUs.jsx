@@ -55,20 +55,7 @@ const Teams =
               "role": "Head of Animal Welfare",
               "avatar": "https://i.pravatar.cc/150?img=11"
             },
-           
-          
-          
-        
-       
-        
-            
-        
-           
-          
-          
-          
-          
-      ]
+           ]
 
 
 
@@ -78,6 +65,7 @@ const [filterdUsers, setfilterdUsers] = useState(Teams);
 const [filterRole, setfilterRole] = useState("");
 const [avilableDog, setAvilableDog] = useState(0);
 const [avilableCat, setAvilableCat] = useState(0);
+
  
 useEffect(()=>{
   if(!searchText){
@@ -138,20 +126,20 @@ useEffect(()=>{
 
   return (
     <div className=' bg-white full-h-screen '>
-    <img src={petimg} alt='pet image' className="w-[1600px] h-[400px] " />
+    <img src={petimg} alt='pet image' className="w-full h-[300px] sm:h-[350px] md:h-[400px] object-cover" />
     <div className='bg-white mt-3'>
     
-    <p className='text-center mt-5 text-2xl bg-white'>
-        Welcome to <span className='font-semobolad text-purple-600'>{organizationName}</span>, a loving home for pets in need. 
+    <p className='mt-5 text-xl sm:text-2xl md:text-3xl bg-white text-center'>
+        Welcome to <span className='font-semobolad text-purple-600 text-center'>{organizationName}</span>, a loving home for pets in need. 
           
       </p>
     </div> 
     
    
-    <div className='bg-gray-100 mt-5 flex justify-around'>
+    <div className='bg-gray-100 mt-5 flex flex-col md:flex-row justify-around items-center p-5'>
     
-    <ui className=' text-2xl mt-20 text-purple-400 text-justify'>
-      <h2 className='txet-2xl m-2 ml-15 text-black'>Our Mission</h2>
+    <ui className=' text-2xl text-purple-400 text-left md:w-1/2 space-y-2'>
+      <h2 className='text-2xl m-2 text-black font-bold'>Our Mission</h2>
       <li>To prevent cruelty to animals</li>
       <li>To protect them from injury.</li>
       <li>To promote animal care and welfare.</li>
@@ -159,24 +147,25 @@ useEffect(()=>{
       <li>To inculcate humanistic values among humans.</li>
     </ui>
 
-<img src={petimg2} alt='pet image2' className='w-[500px] m-4'/>
+<img src={petimg2} alt='pet image2' className='w-full md:w-[500px] m-4 rounded-lg shadow-lg'/>
 </div>
 
 <div className='p-20'>
-  <h1 className='text-center text-4xl text-purple-500 py-10 border-2 border-purple-300 border-dotted rounded-md'>Animal Count</h1>
-  <div className='flex justify-around mt-10'>
-    <div className='bg-gray-100 m-5 w-1/4 rounded-lg'>
+  <h1 className='text-center text-3xl md:text-4xl lg:text-5xl text-purple-500 py-6 md:py-10 border-2 border-purple-300 border-dotted rounded-md w-[90%] mx-auto'>Animal Count</h1>
+  <div className='flex flex-col md:flex-row justify-around mt-10'>
+    <div className='bg-gray-100 m-5 w-full md:w-1/3 lg:w-1/4 rounded-lg p-5'>
       <h2 className='text-center m-5 text-3xl my-4 border-b-2 pb-4 text-purple-400'>Avilable Dog</h2>
       <img src={dog1} className='w-50 h-45 object-cover mx-auto mb-4 rounded-2xl'/>
       <h3 className='text-5xl text-center'>{avilableDog}</h3>
       <div className='flex justify-around m-5'>
-      <SquareMinus className='cursor-pointer' size={50} onClick={()=>{setAvilableDog(avilableDog-1);}} />
-      <SquarePlus className='cursor-pointer' size={50} onClick={()=>{setAvilableDog(avilableDog+1);}} />
+      <SquareMinus className='cursor-pointer' size={50} onClick={()=>{setAvilableDog(avilableDog-1);}} 
+     />
+      <SquarePlus className='cursor-pointer' size={50} onClick={()=>{setAvilableDog(avilableDog+1);}}  />
 
         
       </div>
       </div>
-    <div className='bg-gray-100 m-5 w-1/4 rounded-lg'>
+    <div className='bg-gray-100 m-5 w-full md:w-1/3 lg:w-1/4 rounded-lg p-5'>
       <h2 className='text-center m-5 text-3xl my-4 border-b-2 pb-4 text-purple-400'>Avilable Cat</h2>
       <img src={cat1} className='w-50 h-45 object-cover mx-auto mb-4 rounded-2xl'/>
       <h3 className='text-5xl text-center'>{avilableCat}</h3>
@@ -187,7 +176,7 @@ useEffect(()=>{
     </div>
   </div>
   <div className='flex justify-center mt-10'>
-    <button className='bg-purple-500 px-10 py-3 text-2xl rounded-lg shadow-lg text-black cursor-pointer' onClick={()=>{
+    <button className='bg-purple-500 px-10 py-3 text-2xl rounded-lg shadow-lg text-black cursor-pointer hover:bg-purple-600 transition' onClick={()=>{
       setAvilableDog(0);
       setAvilableCat(0);
     }}>Reset Count</button>
@@ -200,8 +189,8 @@ useEffect(()=>{
     
     <input type='text' placeholder='Search' className='w-2/3 p-2 mb-5 bg-white block mx-auto rounded-lg text-2xl border border-purple-100' value={searchText}
     onChange={(e)=>setsearchText(e.target.value)} />
-       <div className='ml-150 mb-5 '>
-      <span className='text-2xl'>Filter By Position:</span>
+       <div className='mb-5 text-center    sm:items-center sm:justify-center'>
+      <span className='text-xl sm:text-2xl mb-2  sm:mr-4'>Filter By Position:</span>
       <select className='text-lg my-2  rounded-lg px-5 text-purple-500' value={filterRole}
       onChange={(e)=>setfilterRole(e.target.value)}>
 
