@@ -5,6 +5,7 @@ import petimg from '../../src/assets/petimg.jpg';
 import petimg2 from '../../src/assets/petimg2.jpg';
 
 import { SquareMinus, SquarePlus } from 'lucide-react';
+import toast, { Toaster } from 'react-hot-toast';
 
 import { Teams } from './TeamsData';
 
@@ -58,6 +59,20 @@ useEffect(()=>{
     });
     setfilterdUsers(tempfilterdUsers);
 },[filterRole])
+useEffect(()=>{
+  if(avilableDog < 15 && avilableCat < 15){
+    return;
+  }
+  if(avilableDog === 15)
+  {
+    toast.success("avilable dog");
+  }
+  if(avilableCat === 15)
+  {
+    toast.success("avilable cat");
+  }
+},[avilableDog,avilableCat]);
+
 
 
   return (
@@ -94,8 +109,8 @@ useEffect(()=>{
       <img src={dog1} className='w-50 h-45 object-cover mx-auto mb-4 rounded-2xl'/>
       <h3 className='text-5xl text-center'>{avilableDog}</h3>
       <div className='flex justify-around m-5'>
-      <SquareMinus size={50} onClick={()=>{setAvilableDog(avilableDog-1);}} />
-      <SquarePlus size={50} onClick={()=>{setAvilableDog(avilableDog+1);}} />
+      <SquareMinus className='cursor-pointer' size={50} onClick={()=>{setAvilableDog(avilableDog-1);}} />
+      <SquarePlus className='cursor-pointer' size={50} onClick={()=>{setAvilableDog(avilableDog+1);}} />
 
         
       </div>
@@ -105,11 +120,18 @@ useEffect(()=>{
       <img src={cat1} className='w-50 h-45 object-cover mx-auto mb-4 rounded-2xl'/>
       <h3 className='text-5xl text-center'>{avilableCat}</h3>
       <div className='flex justify-around m-5'>
-      <SquareMinus size={50} onClick={()=>{setAvilableCat(avilableCat-1);}} />
-      <SquarePlus size={50} onClick={()=>{setAvilableCat(avilableCat+1);}} />
+      <SquareMinus className='cursor-pointer' size={50} onClick={()=>{setAvilableCat(avilableCat-1);}} />
+      <SquarePlus className='cursor-pointer' size={50} onClick={()=>{setAvilableCat(avilableCat+1);}} />
       </div>
     </div>
   </div>
+  <div className='flex justify-center mt-10'>
+    <button className='bg-purple-500 px-10 py-3 text-2xl rounded-lg shadow-lg text-black cursor-pointer' onClick={()=>{
+      setAvilableDog(0);
+      setAvilableCat(0);
+    }}>Reset Count</button>
+  </div>
+  <Toaster/>
 </div>
 
 
@@ -156,6 +178,7 @@ useEffect(()=>{
       
     }
     )}</div>
+   
     </div>
     
     
