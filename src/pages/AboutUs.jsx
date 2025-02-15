@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import cat1 from '../../src/assets/cat1.avif';
-import dog1 from '../../src/assets/dog1.avif';
-import petimg from '../../src/assets/petimg.jpg';
-import petimg2 from '../../src/assets/petimg2.jpg';
+import cat1 from '../../src/assets/about/cat1.avif';
+import dog1 from '../../src/assets/about/dog1.avif';
+import petimg from '../../src/assets/about/petimg.jpg';
+import petimg2 from '../../src/assets/about/petimg2.jpg';
 
 import { SquareMinus, SquarePlus } from 'lucide-react';
 import toast, { Toaster } from 'react-hot-toast';
