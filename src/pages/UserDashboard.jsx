@@ -64,9 +64,12 @@ const UserDashboard = () => {
   const [favorites, setFavorites] = useState([]);
   const [adoptedPets, setAdoptedPets] = useState([]);
 
-  
 
-  
+  const removeFavorite = (id) => {
+    const updatedFavorites = favorites.filter((pet) => pet.id !== id);
+    setFavorites(updatedFavorites);
+    localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
+  };
 
   const removeAdoptedPet = (id) => {
     const updatedAdoptedPets = adoptedPets.filter((pet) => pet.id !== id);
