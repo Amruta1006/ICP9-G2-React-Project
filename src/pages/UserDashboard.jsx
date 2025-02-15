@@ -27,7 +27,36 @@ const UserDashboard = () => {
     setUser({ name: "", email: "", contact: "", profilePic: "" });
   };
 
-  
+  const handleEditClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  };
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setNewProfilePic(reader.result); 
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleSave = () => {
+    const updatedUser = { ...user, profilePic: newProfilePic };
+    setUser(updatedUser);
+    localStorage.setItem("user", JSON.stringify(updatedUser));
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
