@@ -4,6 +4,7 @@ import Footer from "../components/Footer/Footer";
 const Home = () => {
   return (
     <div className="relative min-h-screen flex flex-col">
+      <Navbar />
       <div
         className="flex-1 bg-cover bg-center"
         style={{ backgroundImage: "url('/assets/HomeImages/Pet-1.jpg')" }} 

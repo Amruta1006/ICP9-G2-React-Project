@@ -5,6 +5,7 @@ import Footer from '../components/Footer/Footer'
 function SuccessStories() {
   return (
     <div>
+      <Navbar />
         <h1>Success Stories</h1>
     </div>
   )

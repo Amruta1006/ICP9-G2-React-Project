@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router,Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import AdoptPet from "./pages/AdoptPet";
 import ContactUs from "./pages/ContactUs";
@@ -7,7 +7,7 @@ import HowToAdopt from "./pages/HowToAdopt";
 import PetDetails from "./pages/PetDetails";
 import SuccessStories from "./pages/SuccessStories";
 import UserDashboard from "./pages/UserDashboard";
-import AboutUs from "./pages/AboutUs";  // Import AboutUs page
+import AboutUs from "./pages/AboutUs";  
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
@@ -26,9 +26,9 @@ const App = () => {
           <Route path="/userdashboard" element={<UserDashboard />} />
         </Routes>
       </div>
-      <Footer />  {/* Footer appears on every page */}
+      <Footer />  
     </div>
   )
 }
 
-export default AdoptPet
+export default App;
