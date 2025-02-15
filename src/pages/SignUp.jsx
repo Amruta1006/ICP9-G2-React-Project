@@ -22,14 +22,26 @@ const SignUp = () => {
     }
   };
 
- 
+  const validateForm = () => {
+    let formErrors = {};
+    if (!user.name.trim()) formErrors.name = "Name is required";
+    if (!user.email.trim()) formErrors.email = "Email is required";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(user.email)) formErrors.email = "Invalid email format";
+    if (!user.password.trim()) formErrors.password = "Password is required";
+    else if (user.password.length < 6) formErrors.password = "Password must be at least 6 characters";
+    if (!user.contact.trim()) formErrors.contact = "Contact number is required";
+    else if (!/^\d{10}$/.test(user.contact)) formErrors.contact = "Invalid contact number";
+    
+    setErrors(formErrors);
+    return Object.keys(formErrors).length === 0;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
       const userData = { ...user, profilePic: image || user.profilePic };
       localStorage.setItem("user", JSON.stringify(userData));
-      navigate("/"); // Redirect to Home Page
-    }
+      navigate("/"); 
   };
 
   return (
