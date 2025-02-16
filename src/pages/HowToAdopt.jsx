@@ -15,4 +15,10 @@ function HowToAdopt() {
 
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-4">
 
+        {[
+            { icon: FaSearch, title: "1. Find a Pet", description: 
+                "Browse our pets and choose the one that fits your home & lifestyle." },
+            { icon: FaClipboardCheck, title: "2. Submit an Application", 
+                description: "Fill out an adoption form to help us understand your needs." },
+
 }
