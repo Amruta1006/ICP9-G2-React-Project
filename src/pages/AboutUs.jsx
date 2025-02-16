@@ -8,4 +8,4 @@ function AboutUs() {
   )
 }
 
-export default AboutUS
+export default AboutUs

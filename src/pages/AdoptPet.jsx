@@ -53,7 +53,6 @@ function AdoptPet() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
       <div className="bg-gradient-to-b from-pink-100 to-white py-16 flex-grow">
         <h1 className="text-5xl font-bold text-center text-gray-800 mb-12">Find Your Furry Friend</h1>
 
@@ -99,8 +98,6 @@ function AdoptPet() {
                     Adopt Me
                   </button>
 
-
-
                 </div>
                             <button
                               onClick={() => toggleFavorite(pet.id)}
@@ -112,7 +109,6 @@ function AdoptPet() {
                         ))}
                     </div>
                   </div>
-                  <Footer />
                   <Toaster />
                 </div>
   );

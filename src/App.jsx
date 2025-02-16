@@ -7,13 +7,15 @@ import HowToAdopt from "./pages/HowToAdopt";
 import PetDetails from "./pages/PetDetails";
 import SuccessStories from "./pages/SuccessStories";
 import UserDashboard from "./pages/UserDashboard";
-import AboutUs from "./pages/AboutUs"; 
+import AboutUs from "./pages/AboutUs";
+
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
     <div className="flex flex-col min-h-screen">
+      <Navbar /> {/* Add this line */}
       <div className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -26,11 +28,9 @@ const App = () => {
           <Route path="/userdashboard" element={<UserDashboard />} />
         </Routes>
       </div>
-      <Footer /> 
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default AdoptPet;
-
-
+export default App; 
