@@ -8,7 +8,6 @@ import PetDetails from "./pages/PetDetails";
 import SuccessStories from "./pages/SuccessStories";
 import UserDashboard from "./pages/UserDashboard";
 import AboutUs from "./pages/AboutUs";
-
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
