@@ -41,4 +41,15 @@ function HowToAdopt() {
             onClick={() => toast.success("Redirecting to pet listings...")}
             className="mt-6 bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 hover:scale-105 transition duration-300 shadow-md"
             >
+                  Browse Pets
+          </button>
+        </div>
+      </div>
+
+      {/* Notification */}
+      <Toaster />
+    </div>
+  );
 }
+
+export default HowToAdopt;
