@@ -36,4 +36,9 @@ function HowToAdopt() {
         <div className="mt-16 bg-[#F5E6CA] py-12 text-center rounded-xl max-w-4xl
          mx-auto px-6 shadow-lg hover:shadow-xl transition">
         <h2 className="text-4xl font-bold text-black">Start Your Adoption Journey Today!</h2>
+        <p className="text-lg mt-2 text-black">Find your perfect furry friend and give them a loving home.</p>
+          <button
+            onClick={() => toast.success("Redirecting to pet listings...")}
+            className="mt-6 bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 hover:scale-105 transition duration-300 shadow-md"
+            >
 }
