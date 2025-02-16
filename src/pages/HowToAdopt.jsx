@@ -13,4 +13,6 @@ function HowToAdopt() {
            steps to bring home a new furry friend! 🐶🐱🐰...
         </p>
 
+        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-4">
+
 }
