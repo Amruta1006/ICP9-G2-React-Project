@@ -12,6 +12,7 @@ const Navbar = () => {
         <li><Link to="/petdetails" className="text-black hover:text-[#8B5E3C] transition duration-300">Pet Details</Link></li>
         <li><Link to="/successstories" className="text-black hover:text-[#8B5E3C] transition duration-300">Success Stories</Link></li>
         <li><Link to="/userdashboard" className="text-black hover:text-[#8B5E3C] transition duration-300">Dashboard</Link></li>
+        <li><Link to="/aboutus" className="text-black hover:text-[#8B5E3C] transition duration-300">About us</Link></li>
         <li><Link to="/contactus" className="text-black hover:text-[#8B5E3C] transition duration-300">Contact Us</Link></li>
       </ul>
     </nav>
