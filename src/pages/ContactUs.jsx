@@ -1,6 +1,7 @@
+import { MapPinned, Phone, Mail } from "lucide-react";
 function ContactUs() {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center py-10">
+    <div className="min-h-screen bg-gradient-to-b from-pink-100 to-white flex flex-col items-center py-10">
       <div className="container mx-auto p-6 max-w-5xl">
         <h1 className="text-4xl font-bold text-center text-gray-900 mb-8 underline decoration-wavy decoration-pink-400">
           Contact Us
@@ -28,9 +29,9 @@ function ContactUs() {
               ></textarea>
               <button
                 type="submit"
-                className="w-full cursor-pointer bg-pink-600 text-white p-3 rounded-lg hover:bg-pink-700 transition font-semibold"
+                className="w-full flex justify-center items-center gap-2 cursor-pointer bg-pink-600 text-white p-3 rounded-lg hover:bg-pink-700 transition font-semibold"
               >
-                Send Message
+                Send Message <Mail />
               </button>
             </form>
           </div>
@@ -39,15 +40,45 @@ function ContactUs() {
               <h2 className="text-2xl font-semibold mb-4 text-gray-800">
                 Our Contact Details
               </h2>
-              <p className="text-gray-700">
-                <strong>📍 Address:</strong> 123 Pet Street, Paw City, Pune
-              </p>
-              <p className="text-gray-700">
-                <strong>📞 Phone:</strong> 8080692940
-              </p>
-              <p className="text-gray-700">
-                <strong>✉️ Email:</strong> contact@petconnection.com
-              </p>
+              <div className="text-gray-700 flex">
+                <span className="flex items-center font-bold gap-1">
+                  <MapPinned />
+                  Address:
+                </span>
+                <a
+                  href="https://www.google.com/maps?q=Pune"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-800 hover:text-gray-600 ml-1"
+                >
+                  123 Pet Street, Paw City, Pune
+                </a>
+              </div>
+              <div className="text-gray-700 flex mt-1">
+                <span className="flex items-center font-bold gap-1">
+                  <Phone />
+                  Phone:
+                </span>
+                <a
+                  href="tel:8080692940"
+                  className="text-gray-800 hover:text-gray-600 ml-1"
+                >
+                  8080692940
+                </a>
+              </div>
+
+              <div className="text-gray-700 flex mt-1">
+                <span className="flex items-center font-bold gap-1">
+                  <Mail />
+                  Email:
+                </span>
+                <a
+                  href="mailto:contact@petconnection.com"
+                  className="text-gray-800 hover:text-gray-600 ml-1"
+                >
+                  contact@petconnection.com
+                </a>
+              </div>
             </div>
             <div className="mt-6">
               <h2 className="text-2xl font-semibold mb-4 text-gray-800">
