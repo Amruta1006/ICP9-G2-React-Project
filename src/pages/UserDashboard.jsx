@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import SignUp from "./SignUp";
 
 const UserDashboard = () => {
   const [user, setUser] = useState({
@@ -120,7 +121,7 @@ const UserDashboard = () => {
       {isModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center  bg-opacity-50">
           <div className="bg-white p-6 rounded-lg shadow-lg w-96 relative">
-            <h2 className="text-xl font-bold mb-4 text-center">Edit Profile</h2>
+<h2 className="text-xl font-bold mb-4 text-center">Edit Profile</h2>
 
             <div className="flex flex-col items-center">
               <img
