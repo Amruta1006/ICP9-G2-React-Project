@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import SignUp from "./SignUp";
-
 const UserDashboard = () => {
   const [user, setUser] = useState({
     name: "",
@@ -90,9 +88,10 @@ const UserDashboard = () => {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <div className="w-full mx-auto p-8 bg-white shadow-lg rounded-lg mt-10 text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-6">Your Dashboard</h2>
+    <div className="flex flex-col min-h-screen bg-[#fdfaf3] ">
+      <div className="flex  p-10 rounded-lg  flex-wrap ">
+      <div className="md:w-[600px] md:ml-20 w-full bg-[#fffdf9] shadow-lg rounded-lg text-center border-blue-100-4 ">
+        <h2 className="text-3xl font-bold text-gray-800 mb-6 mt-2">Your Dashboard</h2>
         <div className="flex flex-col items-center">
           <img
             src={user.profilePic || "https://via.placeholder.com/100"}
@@ -103,26 +102,29 @@ const UserDashboard = () => {
           <p className="text-gray-600">{user.email || "No email available"}</p>
           <p className="text-gray-600">Contact: {user.contact || "Not provided"}</p>
         </div>
-        <div className="mt-6 space-x-4">
+        <div className="mt-6 space-x-4 md:space-x-9">
           <button
             onClick={handleEditClick}
-            className="bg-blue-500 text-white px-5 py-2 rounded-lg shadow-md hover:bg-blue-600 transition"
+            className="bg-[#efd394] px-5 py-2 rounded-lg shadow-md  text-black hover:bg-[#8B5E3C] hover:text-white transition"
           >
             Edit Profile
           </button>
           <button
             onClick={handleSignOut}
-            className="bg-red-500 text-white px-5 py-2 rounded-lg shadow-md hover:bg-red-600 transition"
+            className="bg-red-400 text-black px-5 py-2  rounded-lg shadow-md hover:bg-red-600 transition"
           >
             Sign Out
           </button>
         </div>
       </div>
+      <div className=" shadow-lg rounded-lg ">
+      <img src="/assets/HomeImages/Petimg.jpg" alt="Pet" />
+      </div>
+      </div>
       {isModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center  bg-opacity-50">
           <div className="bg-white p-6 rounded-lg shadow-lg w-96 relative">
-<h2 className="text-xl font-bold mb-4 text-center">Edit Profile</h2>
-
+        <h2 className="text-xl font-bold mb-4 text-center">Edit Profile</h2>
             <div className="flex flex-col items-center">
               <img
                 src={newProfilePic}
@@ -180,7 +182,7 @@ const UserDashboard = () => {
         </div>
       )}
 
-<div className="min-h-screen bg-gray-100 py-10 px-5">
+<div className="min-h-screen py-10 px-5 md:mb-0">
       <div className="max-w-6xl mx-auto mb-10">
         <h2 className="text-3xl font-bold mb-4 text-green-600">🐶 Adopted Pets</h2>
         {adoptedPets.length > 0 ? (
@@ -191,9 +193,10 @@ const UserDashboard = () => {
                 <div className="p-4">
                   <h3 className="text-xl font-bold text-gray-800">{pet.name}</h3>
                   <p className="text-gray-600">{pet.type} - {pet.age}</p>
+                  <p className="text-pink-600 font-semibold">Price: ₹{pet.price}</p>
                   <button
                     onClick={() => removeAdoptedPet(pet.id)}
-                    className="mt-3 px-4 py-2 bg-red-500 text-white rounded-lg w-full hover:bg-red-600 transition"
+                    className="mt-3 px-4 py-2 bg-red-400 text-black rounded-lg w-full hover:bg-red-600 transition"
                   >
                     Unadopt
                   </button>
@@ -205,7 +208,7 @@ const UserDashboard = () => {
           <p className="text-gray-500">No adopted pets yet.</p>
         )}
       </div>
-   <div className="max-w-6xl mx-auto">
+   <div className="max-w-6xl mx-auto md:mb-0">
         <h2 className="text-3xl font-bold mb-4 text-pink-600">❤ Favorite Pets</h2>
         {favorites.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -215,6 +218,7 @@ const UserDashboard = () => {
                 <div className="p-4">
                   <h3 className="text-xl font-bold text-gray-800">{pet.name}</h3>
                   <p className="text-gray-600">{pet.type} - {pet.age}</p>
+                  <p className="text-pink-600 font-semibold">Price: ₹{pet.price}</p>
                   <button
                     onClick={() => removeFavorite(pet.id)}
                     className="mt-3 px-4 py-2 bg-gray-400 text-white rounded-lg w-full hover:bg-gray-500 transition"
