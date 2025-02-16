@@ -1,6 +1,5 @@
-import React from 'react'
-import React, { useState, useEffect } from 'react'
-import { toast, Toaster } from 'react-hot-toast'  
+import React, { useState, useEffect } from 'react';
+import { toast, Toaster } from 'react-hot-toast';
 
 function AdoptPet() {
   const pets = [
@@ -76,37 +75,34 @@ function AdoptPet() {
       image: 'https://www.thesprucepets.com/thmb/6QlPa95jJ6LsWWmFaCaFZSFuhYE=/3300x2190/filters:no_upscale():max_bytes(150000):strip_icc()/white-hotot-rabbit-eating-grass-509265984-5c0da06546e0fb0001366ac0.jpg',
       description: 'Fluffy and curious, loves carrots!',
     },
-  ]
+  ];
 
-  const [favorites, setFavorites] = useState([])
-
-  useEffect(() => {
-    const savedFavorites = JSON.parse(localStorage.getItem('favorites')) || []
-    setFavorites(savedFavorites)
-  }, [])
+  const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
-    localStorage.setItem('favorites', JSON.stringify(favorites))
-  }, [favorites])
+    const savedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    setFavorites(savedFavorites);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+  }, [favorites]);
 
   const toggleFavorite = (petId) => {
     if (favorites.includes(petId)) {
-      setFavorites(favorites.filter((id) => id !== petId))
-      toast.success('Removed from Favorites!')  
+      setFavorites(favorites.filter((id) => id !== petId));
+      toast.success('Removed from Favorites!');
     } else {
-      setFavorites([...favorites, petId])
-      toast.success('Added to Favorites!')  
+      setFavorites([...favorites, petId]);
+      toast.success('Added to Favorites!');
     }
-  }
+  };
 
   const addToCart = (pet) => {
-    toast.success(`${pet.name} added to your cart!`)  
-  }
+    toast.success(`${pet.name} added to your cart!`);
+  };
 
   return (
-    <div>
-        <Navbar />
-        <h1>Adopt a Pet</h1>
     <div className="min-h-screen flex flex-col">
       <div className="bg-gradient-to-b from-pink-100 to-white py-16 flex-grow">
         <h1 className="text-5xl font-bold text-center text-gray-800 mb-12">Find Your Furry Friend</h1>
@@ -120,8 +116,7 @@ function AdoptPet() {
                 <p className="text-gray-600 mt-4 flex-grow">{pet.description}</p>
                 <button
                   onClick={() => addToCart(pet)}
-                  disabled={false}
-                  className={`mt-4 w-full py-2 rounded-lg font-semibold transition-colors duration-300 bg-green-500 text-white hover:bg-green-600`}
+                  className="mt-4 w-full py-2 rounded-lg font-semibold transition-colors duration-300 bg-green-500 text-white hover:bg-green-600"
                 >
                   Adopt Me
                 </button>
@@ -136,7 +131,9 @@ function AdoptPet() {
           ))}
         </div>
       </div>
-      <Toaster /> 
+      <Toaster />
     </div>
-  )
+  );
 }
+
+export default AdoptPet;
