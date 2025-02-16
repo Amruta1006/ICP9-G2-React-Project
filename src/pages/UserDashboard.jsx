@@ -118,6 +118,7 @@ const UserDashboard = () => {
         </div>
       </div>
       <div className=" shadow-lg rounded-lg ">
+      <img src="/assets/HomeImages/Petimg.jpg" alt="Pet" />
       </div>
       </div>
       {isModalOpen && (
