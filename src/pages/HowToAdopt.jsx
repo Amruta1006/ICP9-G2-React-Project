@@ -25,12 +25,15 @@ function HowToAdopt() {
                 { icon: FaHome, title: "4. Welcome Home!", description: "Finalize the adoption and bring your new pet home. 🎉" }
 
               ].map((step, index) => (
-                <div key={index} className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition transform hover:-translate-y-2">
+                <div key={index} className="bg-white rounded-2xl shadow-lg p-6 flex 
+                flex-col items-center text-center hover:shadow-xl transition transform hover:-translate-y-2">
                 <step.icon className="text-5xl text-black" />
                 <h3 className="text-2xl font-bold mt-4 text-black">{step.title}</h3>
                 <p className="text-black mt-2">{step.description}</p>
             </div>
           ))}
         </div>
-
+        <div className="mt-16 bg-[#F5E6CA] py-12 text-center rounded-xl max-w-4xl
+         mx-auto px-6 shadow-lg hover:shadow-xl transition">
+        <h2 className="text-4xl font-bold text-black">Start Your Adoption Journey Today!</h2>
 }
