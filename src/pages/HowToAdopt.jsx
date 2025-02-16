@@ -11,7 +11,7 @@ function HowToAdopt() {
 
       <p className="text-center text-black text-lg max-w-3xl mx-auto mb-12">
           Adopting a pet is a life-changing experience. Follow these simple
-           steps to bring home a new furry friend! 🐶🐱🐰...
+           steps to bring home a new furry friend! 🐶🐱🐰
         </p>
 
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2
