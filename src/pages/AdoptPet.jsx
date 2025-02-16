@@ -141,8 +141,3 @@ function AdoptPet() {
     </div>
   )
 }
-
-
-
-
-
