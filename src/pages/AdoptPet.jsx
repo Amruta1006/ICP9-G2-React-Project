@@ -1,5 +1,5 @@
 import React from 'react'
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { toast, Toaster } from 'react-hot-toast'  
 
 function AdoptPet() {
@@ -126,6 +126,7 @@ function AdoptPet() {
                   Adopt Me
                 </button>
               </div>
+              
               <button
                 onClick={() => toggleFavorite(pet.id)}
                 className={`absolute top-4 right-4 text-2xl transition-transform duration-300 ${favorites.includes(pet.id) ? 'text-red-500 scale-110' : 'text-gray-400 hover:text-red-400 hover:scale-110'}`}
