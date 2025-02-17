@@ -34,6 +34,13 @@ function SuccessStories() {
           image: "https://t3.ftcdn.net/jpg/02/82/28/10/360_F_282281016_H1uPO6dYx5AsYLTHW5fRyDhSI2xnaYPh.jpg",
           story: "Buddy was a friendly and playful dog. He found his home in our park!",
         },
+        {
+          id: 5,
+          petName: "Socks",
+          owner: "Bob Brown",
+          image: "https://cdn.pixabay.com/photo/2020/06/30/22/34/dog-5357794_640.jpg",
+          story: "Socks was a loving and patient cat. He found his forever home in our garden!",
+        },
       ]);
     }, 3000);
   }, []);
