@@ -13,6 +13,13 @@ function SuccessStories() {
           image: "https://www.walkervillevet.com.au/wp-content/uploads/2018/05/rabbit-care-info.jpg",
           story: "Max was a wild and mischievous puppy. He found his forever home in our house!",
         },
+        {
+          id: 2,
+          petName: "Lucy",
+          owner: "Jane Smith",
+          image: "https://www.tierschutzbund.de/fileadmin/_processed_/2/f/csm_Header_Hauskatze_in_Wohnung_c_Lalandrew-stock.adobe.com_dd6d2fabda.jpg",
+          story: "Lucy was a shy and curious kitten. She found her home in our garden!",
+        },
       ]);
     }, 3000);
   }, []);
