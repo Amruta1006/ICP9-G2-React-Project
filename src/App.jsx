@@ -10,6 +10,7 @@ import UserDashboard from "./pages/UserDashboard";
 import AboutUs from "./pages/AboutUs";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import PetDetailedView from "./pages/PetDetailedView";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/howtoadopt" element={<HowToAdopt />} />
           <Route path="/petdetails" element={<PetDetails />} />
+          <Route path="/petdetailedview/:id" element={<PetDetailedView />} />
           <Route path="/successstories" element={<SuccessStories />} />
           <Route path="/userdashboard" element={<UserDashboard />} />
         </Routes>
