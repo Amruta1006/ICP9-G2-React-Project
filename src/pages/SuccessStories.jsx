@@ -20,6 +20,13 @@ function SuccessStories() {
           image: "https://www.tierschutzbund.de/fileadmin/_processed_/2/f/csm_Header_Hauskatze_in_Wohnung_c_Lalandrew-stock.adobe.com_dd6d2fabda.jpg",
           story: "Lucy was a shy and curious kitten. She found her home in our garden!",
         },
+        {
+          id: 3,
+          petName: "Buddy",
+          owner: "Alice Johnson",
+          image: "https://t3.ftcdn.net/jpg/02/82/28/10/360_F_282281016_H1uPO6dYx5AsYLTHW5fRyDhSI2xnaYPh.jpg",
+          story: "Buddy was a friendly and playful dog. He found his home in our park!",
+        },
       ]);
     }, 3000);
   }, []);
