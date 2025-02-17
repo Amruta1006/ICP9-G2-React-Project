@@ -34,6 +34,7 @@ function PetDetails() {
                             name={pet.name}
                             breed={pet.breed}
                             age={pet.age}
+                            price={pet.price}
                         />
                     ))
                 ) : (

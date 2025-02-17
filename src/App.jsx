@@ -11,12 +11,11 @@ import AboutUs from "./pages/AboutUs";
 import PetDetailedView from "./pages/PetDetailedView";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-import PetDetailedView from "./pages/PetDetailedView";
 
 const App = () => {
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar /> 
+      <Navbar />
       <div className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />

@@ -39,6 +39,7 @@ function PetDetailedView() {
                         <p className="text-gray-700 text-lg"><span className='font-semibold'>Type:</span> {petData.type} </p>
                         <p className="text-gray-700 text-lg"><span className='font-semibold'>Color:</span> {petData.color} </p>
                         <p className="text-gray-700 text-lg"><span className='font-semibold'>Gender:</span> {petData.gender} </p>
+                        <p className="text-green-800 font-bold text-xl my-1.5 bg-green-200 w-fit p-1 rounded-lg">Price: <span className='font-semibold'>₹{petData.price}</span>  </p>
                         <p className="text-gray-700 text-xl font-semibold">{petData.description}</p>
                     </div>
                     <div className="m-5 mt-0">
