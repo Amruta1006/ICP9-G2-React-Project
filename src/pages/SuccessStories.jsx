@@ -27,6 +27,13 @@ function SuccessStories() {
           image: "https://t3.ftcdn.net/jpg/02/82/28/10/360_F_282281016_H1uPO6dYx5AsYLTHW5fRyDhSI2xnaYPh.jpg",
           story: "Buddy was a friendly and playful dog. He found his home in our park!",
         },
+        {
+          id: 4,
+          petName: "Buddy",
+          owner: "Alice Johnson",
+          image: "https://t3.ftcdn.net/jpg/02/82/28/10/360_F_282281016_H1uPO6dYx5AsYLTHW5fRyDhSI2xnaYPh.jpg",
+          story: "Buddy was a friendly and playful dog. He found his home in our park!",
+        },
       ]);
     }, 3000);
   }, []);
