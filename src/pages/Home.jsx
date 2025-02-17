@@ -2,14 +2,16 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import i18n from "../i18n"; // Import i18n configuration
 
-const images = [
-  "/assets/HomeImages/Pet-2.jpg",
-  "/assets/HomeImages/Pet-3.jpg",
-  "/assets/HomeImages/Pet-4.jpg",
-  "/assets/HomeImages/Pet-5.jpg",
-  "/assets/HomeImages/Pet-6.jpg",
-  "/assets/HomeImages/Pet-7.jpg",
-];
+// Import images correctly from src/assets
+import pet1 from "../assets/HomeImages/Pet-1.jpg";
+import pet2 from "../assets/HomeImages/Pet-2.jpg";
+import pet3 from "../assets/HomeImages/Pet-3.jpg";
+import pet4 from "../assets/HomeImages/Pet-4.jpg";
+import pet5 from "../assets/HomeImages/Pet-5.jpg";
+import pet6 from "../assets/HomeImages/Pet-6.jpg";
+import pet7 from "../assets/HomeImages/Pet-7.jpg";
+
+const images = [pet2, pet3, pet4, pet5, pet6, pet7];
 
 const Home = () => {
   const { t } = useTranslation();
@@ -28,7 +30,7 @@ const Home = () => {
       <div className="relative w-full">
         <div
           className="w-full h-[450px] md:h-[550px] bg-cover bg-center brightness-95"
-          style={{ backgroundImage: "url('/assets/HomeImages/Pet-1.jpg')" }}
+          style={{ backgroundImage: `url(${pet1})` }}
         ></div>
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/30 text-white text-center px-4">
           <h1 className="text-2xl md:text-4xl font-bold drop-shadow-lg">
