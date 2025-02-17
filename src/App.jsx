@@ -11,6 +11,7 @@ import AboutUs from "./pages/AboutUs";
 import PetDetailedView from "./pages/PetDetailedView";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import PetDetailedView from "./pages/PetDetailedView";
 
 const App = () => {
   return (
