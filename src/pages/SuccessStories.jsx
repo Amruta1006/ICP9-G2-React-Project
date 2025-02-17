@@ -41,6 +41,13 @@ function SuccessStories() {
           image: "https://cdn.pixabay.com/photo/2020/06/30/22/34/dog-5357794_640.jpg",
           story: "Socks was a loving and patient cat. He found his forever home in our garden!",
         },
+        {
+          id: 6,
+          petName: "Socks",
+          owner: "Bob Brown",
+          image: "https://querysprout.com/wp-content/uploads/2021/05/Untitled-design-4-1024x512.jpg",
+          story: "Socks was a loving and patient cat. He found his forever home in our garden!",
+        },
       ]);
     }, 3000);
   }, []);
