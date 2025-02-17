@@ -3,7 +3,7 @@ function ContactUs() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-pink-100 to-white flex flex-col items-center py-10">
       <div className="container mx-auto p-6 max-w-5xl">
-        <h1 className="text-4xl font-bold text-center text-gray-900 mb-8 underline decoration-wavy decoration-pink-400">
+        <h1 className="text-4xl font-bold text-center text-gray-900 mb-8 underline decoration-wavy decoration-[#8B5E3C]">
           Contact Us
         </h1>
         <div className="grid md:grid-cols-2 gap-8">
@@ -15,21 +15,21 @@ function ContactUs() {
               <input
                 type="text"
                 placeholder="Your Name"
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F5E6CA]"
               />
               <input
                 type="email"
                 placeholder="Your Email"
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F5E6CA]"
               />
               <textarea
                 placeholder="Your Message"
                 rows="5"
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F5E6CA]"
               ></textarea>
               <button
                 type="submit"
-                className="w-full flex justify-center items-center gap-2 cursor-pointer bg-pink-600 text-white p-3 rounded-lg hover:bg-pink-700 transition font-semibold"
+                className="w-full flex justify-center items-center gap-2 cursor-pointer bg-[#8B5E3C] text-white hover:bg-[#F5E6CA] hover:text-black p-3 rounded-lg transition font-semibold"
               >
                 Send Message <Mail />
               </button>
