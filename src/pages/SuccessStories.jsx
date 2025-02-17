@@ -5,8 +5,12 @@ function SuccessStories() {
       <p className="text-center text-lg text-gray-600 mb-8">
         See how our adorable pets found their loving homes!
       </p>
+      
+
+
+
       <div className="text-center mt-5">
-        <button className="bg-gray-600 text-white px-4 py-2 rounded-lg shadow-lg text-xl hover:bg-gray-700">
+        <button className="bg-gray-600 text-white px-4 py-2 rounded-lg shadow-lg text-2xl hover:bg-gray-700">
           Share Your Story
         </button>
       </div>
