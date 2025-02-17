@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-[#F5E6CA] text-black py-8 px-6 shadow-inner font-[Poppins]">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 items-start">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left">
         
         {/* Logo & Description */}
         <div>
@@ -30,20 +30,20 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-bold">Contact Us</h3>
           <ul className="mt-2 space-y-2 font-semibold">
-            <li className="flex items-center space-x-2">
+            <li className="flex justify-center md:justify-start items-center space-x-2">
               <MapPin size={18} /> <span>123 Pet Street, Paw City, Pune</span>
             </li>
-            <li className="flex items-center space-x-2">
+            <li className="flex justify-center md:justify-start items-center space-x-2">
               <Phone size={18} /> <span>8080692940</span>
             </li>
-            <li className="flex items-center space-x-2">
+            <li className="flex justify-center md:justify-start items-center space-x-2">
               <Mail size={18} /> <span>contact@petconnection.com</span>
             </li>
           </ul>
         </div>
 
         {/* Social Media */}
-        <div className="flex flex-col">
+        <div className="flex flex-col items-center md:items-start">
           <h3 className="text-lg font-bold">Follow Us</h3>
           <div className="flex space-x-4 mt-2">
             <a href="#" className="hover:text-[#8B5E3C] transition duration-300"><Facebook size={24} /></a>

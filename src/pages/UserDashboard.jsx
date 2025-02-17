@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import petimg from "../assets/HomeImages/Petimg.jpg";
 const UserDashboard = () => {
   const [user, setUser] = useState({
     name: "",
@@ -118,7 +119,11 @@ const UserDashboard = () => {
         </div>
       </div>
       <div className=" shadow-lg rounded-lg ">
+<<<<<<< HEAD
       <img src="/assets/HomeImages/Petimg.jpg" alt="Pet" class="hidden md:block" />
+=======
+      <img src={petimg} alt="Pet" />
+>>>>>>> b213548523019e4bbb2d8370c2c037547c480920
       </div>
       </div>
       {isModalOpen && (

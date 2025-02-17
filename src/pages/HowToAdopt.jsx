@@ -1,8 +1,11 @@
 import React from "react";
 import { FaPaw, FaSearch, FaClipboardCheck, FaHome } from "react-icons/fa";
 import { toast, Toaster } from "react-hot-toast";
+import { useNavigate } from "react-router-dom"; // Import navigation
 
 function HowToAdopt() {
+  const navigate = useNavigate(); // Initialize navigation
+
   return (
     <div className="min-h-screen flex flex-col">
       {/* Main Content */}
@@ -33,7 +36,10 @@ function HowToAdopt() {
           <h2 className="text-4xl font-bold text-black">Start Your Adoption Journey Today!</h2>
           <p className="text-lg mt-2 text-black">Find your perfect furry friend and give them a loving home.</p>
           <button
-            onClick={() => toast.success("Redirecting to pet listings...")}
+            onClick={() => {
+              toast.success("Redirecting to Adopt a Pet page...");
+              navigate("/AdoptPet"); // Smooth instant navigation
+            }}
             className="mt-6 bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 hover:scale-105 transition duration-300 shadow-md"
           >
             Browse Pets
