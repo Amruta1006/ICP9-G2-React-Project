@@ -8,8 +8,8 @@
         "type": "Dog",
         "gender": "Male",
         "color": "Golden",
-        "vaccinated": true,
-        "description": "Rex is a friendly and playful Golden Retriever who loves outdoor activities and companionship."
+        "description": "Rex is a friendly and playful Golden Retriever who loves outdoor activities and companionship.",
+        "price": "35,000"
     },
     {
         "id": 2,
@@ -19,9 +19,9 @@
         "age": 4,
         "type": "Dog",
         "gender": "Male",
-        "color": "Yellow",
-        "vaccinated": true,
-        "description": "Titan is an energetic and loving Labrador who enjoys playing fetch and swimming."
+        "color": "Black",
+        "description": "Titan is a loyal and intelligent Labrador Retriever who enjoys swimming and fetching.",
+        "price": "30,000"
     },
     {
         "id": 3,
@@ -32,8 +32,8 @@
         "type": "Dog",
         "gender": "Male",
         "color": "Black and Tan",
-        "vaccinated": true,
-        "description": "Bruno is a loyal and intelligent German Shepherd with great protective instincts."
+        "description": "Bruno is a loyal and intelligent German Shepherd with great protective instincts.",
+        "price": "40,000"
     },
     {
         "id": 4,
@@ -44,8 +44,8 @@
         "type": "Dog",
         "gender": "Male",
         "color": "Brindle",
-        "vaccinated": true,
-        "description": "Diesel is a calm and affectionate Bulldog who enjoys lounging and short walks."
+        "description": "Diesel is a calm and affectionate Bulldog who enjoys lounging and short walks.",
+        "price": "50,000"
     },
     {
         "id": 5,
@@ -56,8 +56,8 @@
         "type": "Dog",
         "gender": "Male",
         "color": "Black and White",
-        "vaccinated": true,
-        "description": "Rocky is a highly intelligent and active Border Collie, great for agility training."
+        "description": "Rocky is a highly intelligent and active Border Collie, great for agility training.",
+        "price": "30,000"
     },
     {
         "id": 6,
@@ -68,8 +68,8 @@
         "type": "Dog",
         "gender": "Male",
         "color": "Gray and White",
-        "vaccinated": true,
-        "description": "Shadow is an adventurous Siberian Husky with a love for running and the cold."
+        "description": "Shadow is an adventurous Siberian Husky with a love for running and the cold.",
+        "price": "45,000"
     },
     {
         "id": 7,
@@ -80,8 +80,8 @@
         "type": "Rabbit",
         "gender": "Male",
         "color": "Brown",
-        "vaccinated": false,
-        "description": "Thumper is a small and cute Holland Lop with a playful and curious nature."
+        "description": "Thumper is a small and cute Holland Lop with a playful and curious nature.",
+        "price": "600"
     },
     {
         "id": 8,
@@ -92,8 +92,8 @@
         "type": "Rabbit",
         "gender": "Female",
         "color": "White",
-        "vaccinated": false,
-        "description": "Snowball is a fluffy Angora Rabbit with a gentle and affectionate temperament."
+        "description": "Snowball is a fluffy Angora Rabbit with a gentle and affectionate temperament.",
+        "price": "2,000"
     },
     {
         "id": 9,
@@ -104,8 +104,8 @@
         "type": "Rabbit",
         "gender": "Female",
         "color": "Beige",
-        "vaccinated": false,
-        "description": "Cinnamon is a tiny and energetic Netherland Dwarf with a love for hopping around."
+        "description": "Cinnamon is a tiny and energetic Netherland Dwarf with a love for hopping around.",
+        "price": "800"
     },
     {
         "id": 10,
@@ -116,8 +116,8 @@
         "type": "Cat",
         "gender": "Female",
         "color": "White",
-        "vaccinated": true,
-        "description": "Luna is a fluffy and elegant Persian Cat who loves being pampered."
+        "description": "Luna is a fluffy and elegant Persian Cat who loves being pampered.",
+        "price": "8,000"
     },
     {
         "id": 11,
@@ -128,8 +128,8 @@
         "type": "Cat",
         "gender": "Male",
         "color": "Brown Tabby",
-        "vaccinated": true,
-        "description": "Simba is a large and friendly Maine Coon, known for his intelligence and playful nature."
+        "description": "Simba is a large and friendly Maine Coon, known for his intelligence and playful nature.",
+        "price": "9,000"
     },
     {
         "id": 12,
@@ -140,7 +140,7 @@
         "type": "Cat",
         "gender": "Male",
         "color": "Cream and Brown",
-        "vaccinated": true,
-        "description": "Whiskers is a talkative and affectionate Siamese cat with a playful personality."
+        "description": "Whiskers is a talkative and affectionate Siamese cat with a playful personality.",
+        "price": "18,000"
     }
 ]
