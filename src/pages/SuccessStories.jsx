@@ -1,5 +1,4 @@
-import SuccessCard from "./SuccessCard"
-import  { useState, useEffect } from "react";
+
 function SuccessStories() {
   const [stories, setStories] = useState([]);
 
