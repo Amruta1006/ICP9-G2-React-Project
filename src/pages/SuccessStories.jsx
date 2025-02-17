@@ -1,4 +1,5 @@
-
+import SuccessCard from "./SuccessCard"
+import  { useState, useEffect } from "react";
 function SuccessStories() {
   const [stories, setStories] = useState([]);
 
@@ -16,7 +17,7 @@ function SuccessStories() {
           id: 2,
           petName: "Lucy",
           owner: "Jane Smith",
-          image: "https://www.tierschutzbund.de/fileadmin/_processed_/2/f/csm_Header_Hauskatze_in_Wohnung_c_Lalandrew-stock.adobe.com_dd6d2fabda.jpg",
+          image: "https://www.tierschutzbund.de/fileadmin/processed/2/f/csm_Header_Hauskatze_in_Wohnung_c_Lalandrew-stock.adobe.com_dd6d2fabda.jpg",
           story: "Lucy was a shy and curious kitten. She found her home in our garden!",
         },
         {
@@ -28,9 +29,9 @@ function SuccessStories() {
         },
         {
           id: 4,
-          petName: "Buddy",
+          petName: "Sheru",
           owner: "Alice Johnson",
-          image: "https://t3.ftcdn.net/jpg/02/82/28/10/360_F_282281016_H1uPO6dYx5AsYLTHW5fRyDhSI2xnaYPh.jpg",
+          image: "https://www.purina.in/sites/default/files/2020-11/9%20Black%20and%20Tan%20Dog%20BreedsHERO_1.jpg",
           story: "Buddy was a friendly and playful dog. He found his home in our park!",
         },
         {
