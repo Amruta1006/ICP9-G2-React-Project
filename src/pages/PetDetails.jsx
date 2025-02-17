@@ -13,7 +13,7 @@ function PetDetails() {
 
     return (
         <div className="bg-amber-50 pt-10 min-h-screen">
-            <div className="relative w-1/3 mx-auto">
+            <div className="relative w-1/2 md:w-1/3 mx-auto">
                 <input
                     type="text"
                     className="bg-white w-full h-10 pl-10 pr-5 block mx-auto border border-black rounded-lg focus:outline-none"

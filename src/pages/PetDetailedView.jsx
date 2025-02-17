@@ -30,7 +30,7 @@ function PetDetailedView() {
         <>
             <Toaster position="top-center" reverseOrder={false} />
             <div className='min-h-screen p-10 bg-amber-50'>
-                <div className='bg-white w-1/3 border-1 block mx-auto rounded-t-2xl overflow-hidden shadow-lg'>
+                <div className='bg-white md:w-1/3 border-1 block mx-auto rounded-t-2xl overflow-hidden shadow-lg'>
                     <img src={petData.imgUrl} alt={petData.name} className='w-full h-[250px] object-cover' />
                     <div className='p-5 flex flex-col'>
                         <h1 className='text-5xl font-semibold mb-2'>{petData.name}</h1>
