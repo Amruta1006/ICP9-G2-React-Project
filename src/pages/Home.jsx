@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import i18n from "../i18n"; // Import i18n configuration
 
 // Import images correctly from src/assets
@@ -15,6 +16,7 @@ const images = [pet2, pet3, pet4, pet5, pet6, pet7];
 
 const Home = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate(); // Initialize navigate
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -39,6 +41,14 @@ const Home = () => {
           <p className="mt-3 text-md md:text-lg drop-shadow-md max-w-2xl">
             {t("intro")}
           </p>
+
+          {/* Sign Up Button (Smaller & Navbar-matching) */}
+          <button
+            onClick={() => navigate("/signup")} // Navigate to SignUp page
+            className="mt-4 px-4 py-2 bg-[#ff6b35] hover:bg-[#e65a2d] text-white text-sm font-semibold rounded-md shadow-md transition"
+          >
+            {t("sign_up")}
+          </button>
 
           {/* Language Dropdown (Now Below Welcome Message) */}
           <div className="mt-4 bg-white px-3 py-1 rounded-lg shadow-md border border-gray-300">
