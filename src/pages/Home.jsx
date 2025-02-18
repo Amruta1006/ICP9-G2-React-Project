@@ -4,13 +4,13 @@ import { useNavigate } from "react-router-dom"; // Import useNavigate
 import i18n from "../i18n"; // Import i18n configuration
 
 // Import images correctly from src/assets
-import pet1 from "../../public/assets/HomeImages/pet-1.jpg";
-import pet2 from "../../public/assets/HomeImages/pet-2.jpg";
-import pet3 from "../../public/assets/HomeImages/pet-3.jpg";
-import pet4 from "../../public/assets/HomeImages/pet-4.jpg";
-import pet5 from "../../public/assets/HomeImages/pet-5.jpg";
-import pet6 from "../../public/assets/HomeImages/pet-6.jpg";
-import pet7 from "../../public/assets/HomeImages/pet-7.jpg";
+import pet1 from "../assets/HomeImages/Pet-1.jpg";
+import pet2 from "../assets/HomeImages/Pet-2.jpg";
+import pet3 from "../assets/HomeImages/Pet-3.jpg";
+import pet4 from "../assets/HomeImages/Pet-4.jpg";
+import pet5 from "../assets/HomeImages/Pet-5.jpg";
+import pet6 from "../assets/HomeImages/Pet-6.jpg";
+import pet7 from "../assets/HomeImages/Pet-7.jpg";
 
 const images = [pet2, pet3, pet4, pet5, pet6, pet7];
 

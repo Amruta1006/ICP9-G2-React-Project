@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import petimg from "../../public/assets/HomeImages/petimg.jpg";
+import petimg from "../assets/HomeImages/Petimg.jpg";
 const UserDashboard = () => {
   const [user, setUser] = useState({
     name: "",

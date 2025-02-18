@@ -2,18 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 // Import images
-import rexImg from '../../../public/assets/PetDetailsImages/rex.webp';
-import labradorImg from '../../../public/assets/PetDetailsImages/labrador.jpg';
-import germanShepherdImg from '../../../public/assets/PetDetailsImages/german-shepherd.jpg';
-import bulldogImg from '../../../public/assets/PetDetailsImages/bull-dog.jpg';
-import borderCollieImg from '../../../public/assets/PetDetailsImages/border-collie.jpg';
-import huskyImg from '../../../public/assets/PetDetailsImages/husky.jpg';
-import hollandLopImg from '../../../public/assets/PetDetailsImages/holland-lop.jpg';
-import angoraImg from '../../../public/assets/PetDetailsImages/angora.webp';
-import netherlandDwarfImg from '../../../public/assets/PetDetailsImages/netherland-dwarf.webp';
-import persianCatImg from '../../../public/assets/PetDetailsImages/persian-cat.jpg';
-import maineCoonImg from '../../../public/assets/PetDetailsImages/maine-coon.webp';
-import siameseImg from '../../../public/assets/PetDetailsImages/siamese.webp';
+import rexImg from '../../assets/PetDetailsImages/rex.webp';
+import labradorImg from '../../assets/PetDetailsImages/labrador.jpg';
+import germanShepherdImg from '../../assets/PetDetailsImages/german-shepherd.jpg';
+import bulldogImg from '../../assets/PetDetailsImages/bull-dog.jpg';
+import borderCollieImg from '../../assets/PetDetailsImages/border-collie.jpg';
+import huskyImg from '../../assets/PetDetailsImages/husky.jpg';
+import hollandLopImg from '../../assets/PetDetailsImages/holland-lop.jpg';
+import angoraImg from '../../assets/PetDetailsImages/angora.webp';
+import netherlandDwarfImg from '../../assets/PetDetailsImages/netherland-dwarf.webp';
+import persianCatImg from '../../assets/PetDetailsImages/persian-cat.jpg';
+import maineCoonImg from '../../assets/PetDetailsImages/maine-coon.webp';
+import siameseImg from '../../assets/PetDetailsImages/siamese.webp';
 
 // Mapping pet names to images
 const petImages = {
