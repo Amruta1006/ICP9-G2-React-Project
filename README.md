@@ -13,7 +13,7 @@ To start the application, run: `npm run dev`
 
 ## Screenshot
 
-![Home Screenshot](src/assets/ScreenShots/home.png)
+![Home Screenshot](public/assets/ScreenShots/home.png)
 
 
 ## Contributors

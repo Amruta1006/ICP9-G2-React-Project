@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import petimg1 from '../assets/AboutImages/aboutpet-1.jpg';
-import petimg2 from '../assets/AboutImages/aboutpet-2.jpg';
+import petimg1 from '../../public/assets/AboutImages/aboutpet-1.jpg';
+import petimg2 from '../../public/assets/AboutImages/aboutpet-2.jpg';
 
 const AboutUs = ({ organizationName }) => {
     const Teams = [

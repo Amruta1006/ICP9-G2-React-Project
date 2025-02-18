@@ -1,12 +1,41 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
-function PetDetailsCard({ id, imgUrl, name, age, breed, price }) {
+// Import images
+import rexImg from '../../../public/assets/PetDetailsImages/rex.webp';
+import labradorImg from '../../../public/assets/PetDetailsImages/labrador.jpg';
+import germanShepherdImg from '../../../public/assets/PetDetailsImages/german-shepherd.jpg';
+import bulldogImg from '../../../public/assets/PetDetailsImages/bull-dog.jpg';
+import borderCollieImg from '../../../public/assets/PetDetailsImages/border-collie.jpg';
+import huskyImg from '../../../public/assets/PetDetailsImages/husky.jpg';
+import hollandLopImg from '../../../public/assets/PetDetailsImages/holland-lop.jpg';
+import angoraImg from '../../../public/assets/PetDetailsImages/angora.webp';
+import netherlandDwarfImg from '../../../public/assets/PetDetailsImages/netherland-dwarf.webp';
+import persianCatImg from '../../../public/assets/PetDetailsImages/persian-cat.jpg';
+import maineCoonImg from '../../../public/assets/PetDetailsImages/maine-coon.webp';
+import siameseImg from '../../../public/assets/PetDetailsImages/siamese.webp';
+
+// Mapping pet names to images
+const petImages = {
+    Rex: rexImg,
+    Titan: labradorImg,
+    Bruno: germanShepherdImg,
+    Diesel: bulldogImg,
+    Rocky: borderCollieImg,
+    Shadow: huskyImg,
+    Thumper: hollandLopImg,
+    Snowball: angoraImg,
+    Cinnamon: netherlandDwarfImg,
+    Luna: persianCatImg,
+    Simba: maineCoonImg,
+    Whiskers: siameseImg
+};
+
+function PetDetailsCard({ id, name, age, breed, price }) {
     return (
-
         <div className="w-[400px] m-5 bg-white rounded-xl border-1 border-gray-300 shadow-lg overflow-hidden flex flex-col">
             <img
-                src={imgUrl}
+                src={petImages[name] || '/assets/default-pet.jpg'}  // Fallback to default image if not found
                 alt={name}
                 className="w-full h-60 object-cover"
             />
