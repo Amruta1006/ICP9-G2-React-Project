@@ -1,6 +1,6 @@
 import { Search } from 'lucide-react';
 import React, { useState } from 'react';
-import PetData from '../data/petDetails.json';
+import PetData from '../data/PetDetails.json';
 import PetDetailsCard from '../components/PetDetailsCard/PetDetailsCard';
 
 function PetDetails() {
