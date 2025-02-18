@@ -26,13 +26,13 @@ function AdoptPet() {
     },
     {
       id: 3,
-      name: "Nibbles",
-      type: "Rabbit",
-      age: "6 months",
+      name: "Mittens",
+      type: "Cat",
+      age: "2 years",
       image:
-        "http://upload.wikimedia.org/wikipedia/commons/a/a5/European_Rabbit,Lake_District,_UK-_August_2011.jpg",
-      description: "An energetic bunny who loves to hop around and play.",
-      price: "2000",
+        "https://static.boredpanda.com/blog/wp-content/uploads/2020/03/adventures-of-cat-celebrity-mittens-new-zealand-wellington-5e61011dbf6eb__700.jpg",
+        description: "Calm and loving, enjoys cozying up.",
+      price: "3000",
     },
     {
       id: 4,
