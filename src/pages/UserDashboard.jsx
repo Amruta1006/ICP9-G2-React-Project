@@ -106,20 +106,20 @@ const UserDashboard = () => {
         <div className="mt-6 space-x-4 md:space-x-9">
           <button
             onClick={handleEditClick}
-            className="bg-[#efd394] px-5 py-2 rounded-lg shadow-md  text-black hover:bg-[#8B5E3C] hover:text-white transition"
+            className="bg-[#efd394] px-5 py-2 rounded-lg shadow-md  text-black hover:bg-[#8B5E3C] hover:text-white transition mb-2 md:mb-0"
           >
             Edit Profile
           </button>
           <button
             onClick={handleSignOut}
-            className="bg-red-400 text-black px-5 py-2  rounded-lg shadow-md hover:bg-red-600 transition"
+            className="bg-red-400 text-black px-5 py-2  rounded-lg shadow-md hover:bg-red-600 transition  mb-2 md:mb-0"
           >
             Sign Out
           </button>
         </div>
       </div>
       <div className=" shadow-lg rounded-lg ">
-      <img src={petimg} alt="Pet" />
+      <img src={petimg} alt="Pet" class="hidden md:block" />
       </div>
       </div>
       {isModalOpen && (

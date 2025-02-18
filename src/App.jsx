@@ -9,6 +9,7 @@ import SuccessStories from "./pages/SuccessStories";
 import UserDashboard from "./pages/UserDashboard";
 import AboutUs from "./pages/AboutUs";
 import PetDetailedView from "./pages/PetDetailedView";
+import SignUp from "./pages/SignUp"; // Import SignUp page
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/petdetailedview/:id" element={<PetDetailedView />} />
           <Route path="/successstories" element={<SuccessStories />} />
           <Route path="/userdashboard" element={<UserDashboard />} />
+          <Route path="/signup" element={<SignUp />} /> {/* Added SignUp Route */}
         </Routes>
       </div>
       <Footer />
@@ -34,4 +36,4 @@ const App = () => {
   );
 };
 
-export default App; 
+export default App;
