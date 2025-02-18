@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import PetJsonData from '../data/petDetails.json';
+import PetJsonData from '../data/PetDetails.json';
 import { toast, Toaster } from 'react-hot-toast';
 
 function PetDetailedView() {
