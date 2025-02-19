@@ -5,19 +5,19 @@ import petimg2 from '../assets/AboutImages/aboutpet-2.jpg';
 const AboutUs = ({ organizationName }) => {
     const Teams = [
         {
-           "name": "Rajesh Sharma",
-           "role": "Founder & CEO", 
-           "avatar": "https://i.pravatar.cc/150?img=3"
+           "name": "Amruta Maskar",
+           "role": "Team Leader", 
+           "avatar": "./assets/AboutImages/Amruta_Maskar.jpg"
         },
         {
-           "name": "Priya Deshmukh",
-            "role": "Co-Founder & COO",
-             "avatar": "https://i.pravatar.cc/150?img=4"
+           "name": "Abhishek Ugalmugale",
+            "role": "Pet Details",
+             "avatar": "../assets/AboutImages/Abhishek.jpg"
         },
         {
-           "name": "Amit Patil", 
-           "role": "CTO (Chief Technology Officer)", 
-           "avatar": "https://i.pravatar.cc/150?img=5" 
+           "name": "Yash Yeole", 
+           "role": "Adopt a Pet", 
+           "avatar": "./assets/AboutImages/Yash_Yeole.jpg" 
         },
         { 
           "name": "Neha Verma", 
@@ -40,9 +40,9 @@ const AboutUs = ({ organizationName }) => {
            "avatar": "https://i.pravatar.cc/150?img=9" 
         },
         { 
-          "name": "Pooja Iyer",
-           "role": "HR Manager", 
-           "avatar": "https://i.pravatar.cc/150?img=10" 
+          "name": "Samiksha Wagaj",
+           "role": "About Page", 
+           "avatar": ".\assets\AboutImages\Samiksha_Wagaj.jpg" 
         },
         {
            "name": "Ravi Kulkarni",
