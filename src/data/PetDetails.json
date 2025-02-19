@@ -1,7 +1,6 @@
 [
     {
         "id": 1,
-        "imgUrl": "../src/assets/PetDetailsImages/rex.webp",
         "name": "Rex",
         "breed": "Golden Retriever",
         "age": 3,
@@ -13,7 +12,6 @@
     },
     {
         "id": 2,
-        "imgUrl": "../src/assets/PetDetailsImages/labrador.jpg",
         "name": "Titan",
         "breed": "Labrador Retriever",
         "age": 4,
@@ -25,7 +23,6 @@
     },
     {
         "id": 3,
-        "imgUrl": "../src/assets/PetDetailsImages/german-shepherd.jpg",
         "name": "Bruno",
         "breed": "German Shepherd",
         "age": 5,
@@ -37,7 +34,6 @@
     },
     {
         "id": 4,
-        "imgUrl": "../src/assets/PetDetailsImages/bull-dog.jpg",
         "name": "Diesel",
         "breed": "Bulldog",
         "age": 3,
@@ -49,7 +45,6 @@
     },
     {
         "id": 5,
-        "imgUrl": "../src/assets/PetDetailsImages/border-collie.jpg",
         "name": "Rocky",
         "breed": "Border Collie",
         "age": 5,
@@ -61,7 +56,6 @@
     },
     {
         "id": 6,
-        "imgUrl": "../src/assets/PetDetailsImages/husky.jpg",
         "name": "Shadow",
         "breed": "Siberian Husky",
         "age": 4,
@@ -73,7 +67,6 @@
     },
     {
         "id": 7,
-        "imgUrl": "../src/assets/PetDetailsImages/holland-lop.jpg",
         "name": "Thumper",
         "breed": "Holland Lop",
         "age": 1,
@@ -85,7 +78,6 @@
     },
     {
         "id": 8,
-        "imgUrl": "../src/assets/PetDetailsImages/angora.webp",
         "name": "Snowball",
         "breed": "Angora Rabbit",
         "age": 2,
@@ -97,7 +89,6 @@
     },
     {
         "id": 9,
-        "imgUrl": "../src/assets/PetDetailsImages/netherland-dwarf.webp",
         "name": "Cinnamon",
         "breed": "Netherland Dwarf",
         "age": 1,
@@ -109,7 +100,6 @@
     },
     {
         "id": 10,
-        "imgUrl": "../src/assets/PetDetailsImages/persian-cat.jpg",
         "name": "Luna",
         "breed": "Persian Cat",
         "age": 2,
@@ -121,7 +111,6 @@
     },
     {
         "id": 11,
-        "imgUrl": "../src/assets/PetDetailsImages/maine-coon.webp",
         "name": "Simba",
         "breed": "Maine Coon",
         "age": 4,
@@ -133,7 +122,6 @@
     },
     {
         "id": 12,
-        "imgUrl": "../src/assets/PetDetailsImages/siamese.webp",
         "name": "Whiskers",
         "breed": "Siamese",
         "age": 3,

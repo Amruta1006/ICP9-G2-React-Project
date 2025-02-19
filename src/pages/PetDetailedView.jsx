@@ -3,6 +3,37 @@ import { useState, useEffect } from 'react';
 import PetJsonData from '../data/PetDetails.json';
 import { toast, Toaster } from 'react-hot-toast';
 
+// Import images
+import rexImg from '../assets/PetDetailsImages/rex.webp';
+import labradorImg from '../assets/PetDetailsImages/labrador.jpg';
+import germanShepherdImg from '../assets/PetDetailsImages/german-shepherd.jpg';
+import bulldogImg from '../assets/PetDetailsImages/bull-dog.jpg';
+import borderCollieImg from '../assets/PetDetailsImages/border-collie.jpg';
+import huskyImg from '../assets/PetDetailsImages/husky.jpg';
+import hollandLopImg from '../assets/PetDetailsImages/holland-lop.jpg';
+import angoraImg from '../assets/PetDetailsImages/angora.webp';
+import netherlandDwarfImg from '../assets/PetDetailsImages/netherland-dwarf.webp';
+import persianCatImg from '../assets/PetDetailsImages/persian-cat.jpg';
+import maineCoonImg from '../assets/PetDetailsImages/maine-coon.webp';
+import siameseImg from '../assets/PetDetailsImages/siamese.webp';
+
+
+// Create an object mapping pet names to images
+const petImages = {
+    Rex: rexImg,
+    Titan: labradorImg,
+    Bruno: germanShepherdImg,
+    Diesel: bulldogImg,
+    Rocky: borderCollieImg,
+    Shadow: huskyImg,
+    Thumper: hollandLopImg,
+    Snowball: angoraImg,
+    cinnamon: netherlandDwarfImg,
+    Luna: persianCatImg,
+    Simba: maineCoonImg,
+    Whiskers: siameseImg
+};
+
 function PetDetailedView() {
     const { id } = useParams();
     const [petData, setPetData] = useState(null);
@@ -31,7 +62,7 @@ function PetDetailedView() {
             <Toaster position="top-center" reverseOrder={false} />
             <div className='min-h-screen p-10 bg-amber-50'>
                 <div className='bg-white md:w-1/3 border-1 block mx-auto rounded-t-2xl overflow-hidden shadow-lg'>
-                    <img src={petData.imgUrl} alt={petData.name} className='w-full h-[250px] object-cover' />
+                    <img src={petImages[petData.name]} alt={petData.name} className='w-full h-[250px] object-cover' />
                     <div className='p-5 flex flex-col'>
                         <h1 className='text-5xl font-semibold mb-2'>{petData.name}</h1>
                         <p className="text-gray-700 text-lg"><span className='font-semibold'>Breed:</span> {petData.breed}</p>

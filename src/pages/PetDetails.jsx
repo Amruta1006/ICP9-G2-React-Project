@@ -1,10 +1,9 @@
-import { Search } from 'lucide-react';
 import React, { useState } from 'react';
+import { Search } from 'lucide-react';
 import PetData from '../data/PetDetails.json';
 import PetDetailsCard from '../components/PetDetailsCard/PetDetailsCard';
 
 function PetDetails() {
-
     const [searchText, setSearchText] = useState('');
 
     const filteredPets = PetData.filter((pet) =>
@@ -26,11 +25,10 @@ function PetDetails() {
 
             <div className="flex flex-wrap justify-center p-10">
                 {filteredPets.length > 0 ? (
-                    filteredPets.map((pet, id) => (
+                    filteredPets.map((pet) => (
                         <PetDetailsCard
-                            key={id}
+                            key={pet.id}
                             id={pet.id}
-                            imgUrl={pet.imgUrl}
                             name={pet.name}
                             breed={pet.breed}
                             age={pet.age}
