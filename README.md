@@ -26,4 +26,4 @@ To start the application, run: `npm run dev`
 - **Adopt a Pet** - Yash Yeole
 - **Success Story Page** - Tosif
 
-Website: [Pet Adoption Website](https://thepetadoptiowebsite.netlify.app/)
+Website: [Pet Adoption Website](https://thepetadoptionwebsiteicp9.netlify.app/)
