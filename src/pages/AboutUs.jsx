@@ -7,48 +7,43 @@ const AboutUs = ({ organizationName }) => {
         {
            "name": "Amruta Maskar",
            "role": "Team Leader", 
-           "avatar": "./assets/AboutImages/Amruta_Maskar.jpg"
+           "avatar": "../../src/assets/AboutImages/Amruta_Maskar.jpg"
         },
         {
            "name": "Abhishek Ugalmugale",
             "role": "Pet Details",
-             "avatar": "../assets/AboutImages/Abhishek.jpg"
+             "avatar": "../../src/assets/AboutImages/Abhishek.jpg"
         },
         {
            "name": "Yash Yeole", 
            "role": "Adopt a Pet", 
-           "avatar": "./assets/AboutImages/Yash_Yeole.jpg" 
+           "avatar": "../../src/assets/AboutImages/Yash_Yeole.jpg" 
         },
         { 
-          "name": "Neha Verma", 
-          "role": "Chief Marketing Officer", 
-          "avatar": "https://i.pravatar.cc/150?img=6"
+          "name": "Gitanjali Sase", 
+          "role": "User Dashboard", 
+          "avatar": "../../src/assets/AboutImages/Gitanjali_Sase.jpg"
         },
         {
-           "name": "Sandeep Joshi", 
-           "role": "Head of Operations", 
-           "avatar": "https://i.pravatar.cc/150?img=7"
+           "name": "Juned Ansari", 
+           "role": "Contact Us", 
+           "avatar": "../../src/assets/AboutImages/Juned_Ansari.jpg"
          },
         {
-           "name": "Ananya Mehta", 
-           "role": "Head of Customer Support",
-            "avatar": "https://i.pravatar.cc/150?img=8"
+           "name": "Bhakti Dethe", 
+           "role": "How To Adopt",
+            "avatar": "../../src/assets/AboutImages/Bhakti_Dhete.jpg"
         },
         {
-           "name": "Vikram Singh", 
-           "role": "Finance Director", 
-           "avatar": "https://i.pravatar.cc/150?img=9" 
+           "name": "Tosif", 
+           "role": "Success Stories", 
+           "avatar": "../../src/assets/AboutImages/Tosif.jpg" 
         },
         { 
           "name": "Samiksha Wagaj",
            "role": "About Page", 
-           "avatar": ".\assets\AboutImages\Samiksha_Wagaj.jpg" 
+           "avatar": "../../src/assets/AboutImages/Samiksha_Wagaj.jpg" 
         },
-        {
-           "name": "Ravi Kulkarni",
-            "role": "Head of Animal Welfare", 
-            "avatar": "https://i.pravatar.cc/150?img=11" 
-        }
     ];
 
 
@@ -79,11 +74,11 @@ const AboutUs = ({ organizationName }) => {
 
     return (
         <div className="bg-[#fdfaf3] full-h-screen">
-            <img src={petimg1} alt='pet image1' className='w-full h-[300px] sm:h-[350px] md:h-[400px] object-cover' />
-            <h1 className='text-center'>About Us</h1>
+            <img src={petimg1} alt='pet image1' className='w-full h-[300px] sm:h-[350px] md:h-[500px] object-cover' />
+            <h1 className='text-center text-3xl pt-4 font-semibold'>About Us</h1>
             <div className='bg-white mt-3'>
-                <p className='mt-5 text-xl sm:text-2xl md:text-3xl bg-white text-center'>
-                    Welcome to <span className='font-semibold text-black'>{organizationName}</span>, a loving home for pets in need.
+                <p className='text-xl font-semibold sm:text-xl md:text-2xl bg-white text-center'>
+                    Welcome to<span className='font-semibold text-black'>{organizationName}</span>, a loving home for pets in need.
                 </p>
             </div>
             <div className='bg-gray-100 mt-5 flex flex-col md:flex-row justify-around items-center p-5'>
@@ -116,8 +111,8 @@ const AboutUs = ({ organizationName }) => {
                 {filteredUsers.map((userData, index) => {
                     const { name, role, avatar } = userData;
                     return (
-                        <div className='bg-white shadow-lg m-5 px-5 py-2 rounded-lg w-[400px]' key={index}>
-                            <img src={avatar} className='w-full h-auto' />
+                        <div className='bg-white shadow-lg m-5 px-5 py-4 rounded-lg w-[300px]' key={index}>
+                            <img src={avatar} className='w-full h-[300px] object-contain' />
                             <h1 className='text-center font-bold text-lg m-3'>{name}</h1>
                             <p className='text-center'>Role: {role}</p>
                         </div>
