@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import petimg1 from '../assets/AboutImages/aboutpet-1.jpg';
 import petimg2 from '../assets/AboutImages/aboutpet-2.jpg';
 
+
 import Amruta from '../assets/AboutImages/Amruta_Maskar.jpg';
 import Abhishek from '../assets/AboutImages/Abhishek.jpg';
 import Yash from '../assets/AboutImages/Yash_Yeole.jpg';
