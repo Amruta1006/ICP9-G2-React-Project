@@ -94,10 +94,10 @@ const AboutUs = ({ organizationName }) => {
             </div>
             <h2 className='text-center text-3xl m-5 text-black'><b>OUR TEAM</b></h2>
 
-            <input type='text' placeholder='Search' className='w-2/3 p-2 mb-5 bg-white block mx-auto rounded-lg text-2xl border border-purple-100'
+            <input type='text' placeholder='Search' className='w-2/3 p-2 ps-3 mb-5 bg-white block mx-auto rounded-lg text-2xl border border-gray-500'
                 value={searchText} onChange={(e) => setSearchText(e.target.value)} />
 
-            <div className='mb-5 text-center sm:items-center sm:justify-center'>
+            <div className='mb-5 text-center border-1 border-gray-500 w-fit px-3 rounded-2xl mx-auto  '>
                 <span className='text-xl sm:text-2xl mb-2 sm:mr-4'>Filter By Position:</span>
                 <select className='text-lg my-2 rounded-lg px-5' value={filterRole} onChange={(e) => setFilterRole(e.target.value)}>
                     <option value='all'>All</option>
