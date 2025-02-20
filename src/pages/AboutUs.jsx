@@ -2,50 +2,26 @@ import React, { useEffect, useState } from 'react';
 import petimg1 from '../assets/AboutImages/aboutpet-1.jpg';
 import petimg2 from '../assets/AboutImages/aboutpet-2.jpg';
 
+import Amruta from '../assets/AboutImages/Amruta_Maskar.jpg';
+import Abhishek from '../assets/AboutImages/Abhishek.jpg';
+import Yash from '../assets/AboutImages/Yash_Yeole.jpg';
+import Gitanjali from '../assets/AboutImages/Gitanjali_Sase.jpg';
+import Juned from '../assets/AboutImages/Juned_Ansari.jpg';
+import Bhakti from '../assets/AboutImages/Bhakti_Dhete.jpg';
+import Tosif from '../assets/AboutImages/Tosif.jpg';
+import Samiksha from '../assets/AboutImages/Samiksha_Wagaj.jpg';
+
 const AboutUs = ({ organizationName }) => {
     const Teams = [
-        {
-           "name": "Amruta Maskar",
-           "role": "Team Leader", 
-           "avatar": "../../src/assets/AboutImages/Amruta_Maskar.jpg"
-        },
-        {
-           "name": "Abhishek Ugalmugale",
-            "role": "Pet Details",
-             "avatar": "../../src/assets/AboutImages/Abhishek.jpg"
-        },
-        {
-           "name": "Yash Yeole", 
-           "role": "Adopt a Pet", 
-           "avatar": "../../src/assets/AboutImages/Yash_Yeole.jpg" 
-        },
-        { 
-          "name": "Gitanjali Sase", 
-          "role": "User Dashboard", 
-          "avatar": "../../src/assets/AboutImages/Gitanjali_Sase.jpg"
-        },
-        {
-           "name": "Juned Ansari", 
-           "role": "Contact Us", 
-           "avatar": "../../src/assets/AboutImages/Juned_Ansari.jpg"
-         },
-        {
-           "name": "Bhakti Dethe", 
-           "role": "How To Adopt",
-            "avatar": "../../src/assets/AboutImages/Bhakti_Dhete.jpg"
-        },
-        {
-           "name": "Tosif", 
-           "role": "Success Stories", 
-           "avatar": "../../src/assets/AboutImages/Tosif.jpg" 
-        },
-        { 
-          "name": "Samiksha Wagaj",
-           "role": "About Page", 
-           "avatar": "../../src/assets/AboutImages/Samiksha_Wagaj.jpg" 
-        },
+        { name: "Amruta Maskar", role: "Team Leader", avatar: Amruta },
+        { name: "Abhishek Ugalmugale", role: "Pet Details", avatar: Abhishek },
+        { name: "Yash Yeole", role: "Adopt a Pet", avatar: Yash },
+        { name: "Gitanjali Sase", role: "User Dashboard", avatar: Gitanjali },
+        { name: "Juned Ansari", role: "Contact Us", avatar: Juned },
+        { name: "Bhakti Dethe", role: "How To Adopt", avatar: Bhakti },
+        { name: "Tosif", role: "Success Stories", avatar: Tosif },
+        { name: "Samiksha Wagaj", role: "About Page", avatar: Samiksha },
     ];
-
 
     const [searchText, setSearchText] = useState("");
     const [filteredUsers, setFilteredUsers] = useState(Teams);
@@ -73,12 +49,12 @@ const AboutUs = ({ organizationName }) => {
     }, [filterRole]);
 
     return (
-        <div className="bg-[#fdfaf3] full-h-screen">
+        <div className="bg-[#fdfaf3] min-h-screen ">
             <img src={petimg1} alt='pet image1' className='w-full h-[300px] sm:h-[350px] md:h-[500px] object-cover' />
             <h1 className='text-center text-3xl pt-4 font-semibold'>About Us</h1>
             <div className='bg-white mt-3'>
                 <p className='text-xl font-semibold sm:text-xl md:text-2xl bg-white text-center'>
-                    Welcome to<span className='font-semibold text-black'>{organizationName}</span>, a loving home for pets in need.
+                    Welcome to <span className='font-semibold text-black'>{organizationName}</span>, a loving home for pets in need.
                 </p>
             </div>
             <div className='bg-gray-100 mt-5 flex flex-col md:flex-row justify-around items-center p-5'>
@@ -97,7 +73,7 @@ const AboutUs = ({ organizationName }) => {
             <input type='text' placeholder='Search' className='w-2/3 p-2 ps-3 mb-5 bg-white block mx-auto rounded-lg text-2xl border border-gray-500'
                 value={searchText} onChange={(e) => setSearchText(e.target.value)} />
 
-            <div className='mb-5 text-center border-1 border-gray-500 w-fit px-3 rounded-2xl mx-auto  '>
+            <div className='mb-5 text-center border border-gray-500 w-fit px-3 rounded-2xl mx-auto'>
                 <span className='text-xl sm:text-2xl mb-2 sm:mr-4'>Filter By Position:</span>
                 <select className='text-lg my-2 rounded-lg px-5' value={filterRole} onChange={(e) => setFilterRole(e.target.value)}>
                     <option value='all'>All</option>
@@ -107,12 +83,12 @@ const AboutUs = ({ organizationName }) => {
                 </select>
             </div>
 
-            <div className="flex flex-wrap justify-around">
+            <div className="flex flex-wrap justify-evenly">
                 {filteredUsers.map((userData, index) => {
                     const { name, role, avatar } = userData;
                     return (
-                        <div className='bg-white shadow-lg m-5 px-5 py-4 rounded-lg w-[300px]' key={index}>
-                            <img src={avatar} className='w-full h-[300px] object-contain' />
+                        <div className='bg-white shadow-lg m-5 px-5 py-4 border-1 border-gray-300 rounded-lg w-[300px]' key={index}>
+                            <img src={avatar} className='w-full h-[300px] object-contain' alt={name} />
                             <h1 className='text-center font-bold text-lg m-3'>{name}</h1>
                             <p className='text-center'>Role: {role}</p>
                         </div>
